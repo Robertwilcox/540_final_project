@@ -1,30 +1,35 @@
 /*
- * Authors: Ibrahim Binmahfood, Robert Wilcox, andMohamed Gnedi
+ * Authors: Ibrahim Binmahfood, Robert Wilcox, and Mohamed Gnedi
  * ECE540, Kravitz
  * Final Project, PMOD D Controller - rtl module
- * 11/24/2023
+ * 11/26/2023
  *
  * Platform: RVfpga on Boolean Board
- * Description: 
+ * Description: The 'ultrasonic_sensor' module was implemented by Josh Macfie.
+ * The rtl module below instantiates for the sensor. There is 1 register that
+ * can be accessed. The state and i_echo 1 bit registers can be read at offset
+ * 0x00.
  *
  */
 
 module pmod_D_ctrlr
-    (input wire logic i_clk,
-     input wire logic i_rst,
+    (input wire logic        i_clk,
+     input wire logic        i_rst,
+
      // Wishbone Interface
-     input wire logic [5:0] i_wb_adr,         // at require 6 bits for addresses in mind
+     input wire logic [5:0]  i_wb_adr,         // at require 6 bits for addresses in mind
      input wire logic [31:0] i_wb_dat,        
-     input wire logic [3:0] i_wb_sel,         // at most only need 4 select lines
-     input wire logic i_wb_we,
-     input wire logic i_wb_cyc,
-     input wire logic i_wb_stb,
-     output logic [31:0] o_wb_dat,
-     output logic o_wb_ack,
+     input wire logic [3:0]  i_wb_sel,         // at most only need 4 select lines
+     input wire logic        i_wb_we,
+     input wire logic        i_wb_cyc,
+     input wire logic        i_wb_stb,
+     output logic [31:0]     o_wb_dat,
+     output logic            o_wb_ack,
+
      // Ultrasonic Sensor (HC-SR04) signals
-     input wire logic   i_sensor_clk,   // @64 MHz
-     output logic  o_trigger,      // trigger pin
-     input logic   i_echo);        // echo pin 
+     input wire logic        i_sensor_clk,   // @64 MHz
+     output logic            o_trigger,      // trigger pin
+     input logic             i_echo);        // echo pin 
 
     // Register Write Enable:
     //
@@ -43,9 +48,7 @@ module pmod_D_ctrlr
         // if valid bus cycle in progress AND no ACK signal
         o_wb_ack <= i_wb_cyc & !o_wb_ack;
 
-        if (i_rst) begin
-            o_wb_ack    <= 1'b0; // if reset asserted then let ack = 0
-        end
+        if (i_rst) o_wb_ack    <= 1'b0; // if reset asserted then let ack = 0
 /*
         // Register Write Enable asserted
         if (reg_we) begin

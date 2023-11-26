@@ -16,10 +16,19 @@
 //********************************************************************************
 // $Id$
 //
-// Function: VeeRwolf toplevel for Nexys A7 board
+// Function: VeeRwolf toplevel for Boolean board
 // Comments:
+//
 // Modification: 
-// - Instantiated 'hdmi_tx_v1_0' and generated 'clk_wz_0' modules. Added the
+// - Instantiated 'clk_gen_vga', 'clk_gen_pmodD' and generated 'clk_wiz_1'
+// modules. Added the i_pmodD and o_pmodD signals to portlist. Created the
+// HC-SR04 CLK signals interfaced from clk_gen_pmodD to clk_wiz_1 and to 
+// veerwolf_core modules. The VGA CLK signals interfaced from clk_gen_vga to
+// clk_wiz_0 and to hdmi_tx_v1_0 and veerwolf_core modules aswell.
+//  By: Ibrahim Binmahfood, Robert Wilcox, and Mohamed Gnedi
+//  Date: 11/24/2023
+//
+// - Instantiated 'hdmi_tx_v1_0' and generated 'clk_wiz_0' modules. Added the
 // o_hdmi_clk and o_hdmi_d signals to portlist. Created vga signals interfaced
 // from clk_wz_0 and hdmi_tx_v1_0 and veerwolf_core modules.
 //  By: Ibrahim Binmahfood and Mohamed Gnedi

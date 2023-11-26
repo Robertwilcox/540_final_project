@@ -1,7 +1,7 @@
 #
-# Authors: Ibrahim Binmahfood, Mohamed Gnedi
+# Authors: Ibrahim Binmahfood, Robert Wilcox, and Mohamed Gnedi
 # ECE 540, Kravitz
-# Final Project, Configuration
+# Final Project, Configuration of Slave address
 # 11/25/2023
 #
 # Description: Maps the slaves at the respective offsets and their given sizes.

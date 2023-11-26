@@ -18,7 +18,13 @@
 //
 // Function: VeeRwolf tech-agnostic toplevel
 // Comments:
+//
 // Modification: 
+// - Added the pmod_D signals from 'rvfpgaboolean.sv' and instantiated
+// 'pmod_D_ctrlr_wrapper' module along with its respective wishbone signals.
+// By:    Ibrahim Binmahfood, Robert Wilcox, and Mohamed Gnedi
+// Date:  11/24/2023
+//
 // - Added the vga signals from 'rvfpgaboolean.sv' and instantiated
 // 'vga_ctrlr_wrapper' module along with its respective wishbone signals.
 // By:    Ibrahim Binmahfood and Mohamed Gnedi
