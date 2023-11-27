@@ -513,7 +513,7 @@ vga_controller vga_ctrl_inst (
 
 // Instantiate the servo_controller
 servo_controller servo_inst (
-    .pwm_out(servo_pwm_out),       // PWM output for servo
+    .pwm_out        (servo_pwm_out),       // PWM output for servo
 
     // Wishbone interface connections
     .wb_clk         (clk),                      // Wishbone clock

@@ -87,7 +87,7 @@ set_property -dict {PACKAGE_PIN V3 IOSTANDARD LVCMOS33} [get_ports {RGB1_G}]
 set_property -dict {PACKAGE_PIN V5 IOSTANDARD LVCMOS33} [get_ports {RGB1_B}]
 
 # Servo
-set_property -dict {PACKAGE_PIN J6 IOSTANDARD LVCMOS33} [get_ports {SERVO_PWM}]
+set_property -dict {PACKAGE_PIN M14 IOSTANDARD LVCMOS33} [get_ports {SERVO_PWM}]
 
 
 # VGA to HDMI
