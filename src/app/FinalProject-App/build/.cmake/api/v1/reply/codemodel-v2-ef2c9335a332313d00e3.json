@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FinalProject-App",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "app.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-app.elf-Debug-849f68ff85ef3f2e766a.json",
+					"name" : "app.elf",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/ibrahimbinmahfood/Desktop/PSU-F23/ECE-540/Projects/Final-Project/src/apps/FinalProject-App/build",
+		"source" : "C:/Users/ibrahimbinmahfood/Desktop/PSU-F23/ECE-540/Projects/Final-Project/src/apps/FinalProject-App"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
