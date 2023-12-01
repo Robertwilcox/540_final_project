@@ -16,19 +16,10 @@
 //********************************************************************************
 // $Id$
 //
-// Function: VeeRwolf toplevel for Boolean board
+// Function: VeeRwolf toplevel for Nexys A7 board
 // Comments:
-//
 // Modification: 
-// - Instantiated 'clk_gen_vga', 'clk_gen_pmodD' and generated 'clk_wiz_1'
-// modules. Added the i_pmodD and o_pmodD signals to portlist. Created the
-// HC-SR04 CLK signals interfaced from clk_gen_pmodD to clk_wiz_1 and to 
-// veerwolf_core modules. The VGA CLK signals interfaced from clk_gen_vga to
-// clk_wiz_0 and to hdmi_tx_v1_0 and veerwolf_core modules aswell.
-//  By: Ibrahim Binmahfood, Robert Wilcox, and Mohamed Gnedi
-//  Date: 11/24/2023
-//
-// - Instantiated 'hdmi_tx_v1_0' and generated 'clk_wiz_0' modules. Added the
+// - Instantiated 'hdmi_tx_v1_0' and generated 'clk_wz_0' modules. Added the
 // o_hdmi_clk and o_hdmi_d signals to portlist. Created vga signals interfaced
 // from clk_wz_0 and hdmi_tx_v1_0 and veerwolf_core modules.
 //  By: Ibrahim Binmahfood and Mohamed Gnedi
@@ -88,15 +79,9 @@ module rvfpgaboolean
    wire    rst_core;
 
    // PMOD D HC-SR04 sensor CLK signals
-   wire    o_clk_pmodD_core;
-   wire    o_rst_pmodD_core;
-
    wire    hc_sr04_sensor_clk;
 
    // VGA: CLK signals
-   wire    o_clk_vga_core;
-   wire    o_rst_vga_core;
-
    wire    vga_clk;     // pixel clock @25.20 MHz
    wire    vga_clk_x5;  // pixel clk x 5 = @126 MHz
    wire    clk_lock;    // lock the clock
@@ -115,33 +100,19 @@ module rvfpgaboolean
       .o_clk_core (clk_core),
       .o_rst_core (rst_core));
 
-  clk_gen_boolean
-  clk_gen_vga
-     (.i_clk (clk),
-      .i_rst (1'b0),
-      .o_clk_core (o_clk_vga_core),
-      .o_rst_core (o_rst_vga_core));
-
-  clk_gen_boolean
-  clk_gen_pmodD
-     (.i_clk (clk),
-      .i_rst (1'b0),
-      .o_clk_core (o_clk_pmodD_core),
-      .o_rst_core (o_rst_pmodD_core));
-
   // CMT IP core for Sensor Signals
  clk_wiz_1 clk_div_cmt_hc_sr04
    (.clk_out1        (hc_sr04_sensor_clk),     // output clk_out1 @64 MHz
-    .reset           (o_rst_pmodD_core),
-    .clk_in1         (o_clk_pmodD_core));      // input clk_in1 
+    .reset           (1'b0),
+    .clk_in1         (clk));      // input clk_in1 
 
   // CMT IP core for VGA signals
    clk_wiz_0 clk_div_cmt_vga
       (.clk_out1     (vga_clk),           // output clk_out1 @25.20 MHz
        .clk_out2     (vga_clk_x5),        // output clk_out2 @126 MHz
-       .reset        (o_rst_vga_core),          
+       .reset        (1'b0),          
        .locked       (clk_lock),          // output clk locked
-       .clk_in1      (o_clk_vga_core));   // input clk_in1
+       .clk_in1      (clk));   // input clk_in1
 
    // VGA to HDMI Converter IP core from RealDigital
    hdmi_tx_v1_0 

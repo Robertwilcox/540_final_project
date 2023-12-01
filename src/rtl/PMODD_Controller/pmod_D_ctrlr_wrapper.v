@@ -1,14 +1,13 @@
 /*
-* Author: Ibrahim Binmahfood, Robert Wilcox, and Mohamed Gnedi
+* Author: Ibrahim Binmahfood
 * ECE540, Kravitz
 * Final Project, PMOD D Controller - wrapper
-* 11/26/2023
+* 11/25/2023
 *
 * Platform: RVfpga on Boolean Board
 * Description: Wraps the system verilog rtl module 'pmod_D_ctrlr' into a verilog
 * module. Due to System Verilog not directly supported by Vivado for rtl modules
-* System Verilog. The 3 bits remaining for 'i_pmod_D' and 'o_pmod_D' are left
-* unconnected since they are not used.
+* System Verilog.
 *
 */
 
