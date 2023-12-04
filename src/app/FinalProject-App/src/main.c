@@ -1,8 +1,8 @@
 /*
  * Author: Ibrahim Binmahfood, Mohamed Gnedi, and Robert Wilcox
  * ECE540, Kravitz
- * Final Project, Application app.c
- * 11/25/2023
+ * Final Project, Application main.c
+ * 12/03/2023
  *
  * Platform: RVfpga on the Boolean Board  
  * Description: 
