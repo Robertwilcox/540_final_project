@@ -10,7 +10,7 @@
  */
 
 #include "hc_sr04.h"
-//#include "vga.h"
+#include "vga.h"
 
 // GPIO0 Module Registers
 #define RGPIO0_IN       0x80001400
@@ -29,8 +29,6 @@
 
 #define ALL_LEDS        0x0000FFFF
 #define WAIT_DELAY      100000
-
-#define WR_GPIO(dir, val) { (*(volatile unsigned *)dir) = (val); }
 
 void delay(void);
 
