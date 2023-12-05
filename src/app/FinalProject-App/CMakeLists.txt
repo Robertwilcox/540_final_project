@@ -6,7 +6,7 @@ include_directories(include)
 
 file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c" ${CMAKE_CURRENT_SOURCE_DIR}/../common/drivers/uart/uart_send_char.c)
 
-set(TARGET_NAME app.elf)
+set(TARGET_NAME main.elf)
 
 option(CUSTOM_UART "Use a custom uart_send_char()" ON)
 
