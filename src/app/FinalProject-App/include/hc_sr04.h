@@ -2,11 +2,11 @@
  * Author: Ibrahim Binmahfood, Mohamed Gnedi, and Robert Wilcox
  * ECE540, Kravitz
  * Final Project, Header hc_sr04.h
- * 12/03/2023
+ * 12/05/2023
  *
  * Platform: RVfpga on the Boolean Board  
  * Description: The HC-SR04 sensor wrapper file. Involves reading from the PMOD D
- * peripheral register. At the offset 0x0000_1600 + the base address of 0x8000_0000.
+ * peripheral register. At the offset 0x0000_1640 + the base address of 0x8000_0000.
  * The following functions allow the ease of retrieving the status and echo_pulse bits.
  * Also, there is a functions that wraps around the ee_printf() function to print out
  * to the serial terminal the status and echo_pulse values.
@@ -26,7 +26,7 @@
 #endif // NO_SEMIHOSTING
 
 // PMOD D Module Register
-#define PMODD_STATE     0x80001600
+#define PMODD_STATE     0x80001640
 
 #define RD_GPIO(dir) (*(volatile unsigned *)dir)
 
