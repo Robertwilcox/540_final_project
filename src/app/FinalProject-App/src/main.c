@@ -1,8 +1,8 @@
 /*
  * Author: Ibrahim Binmahfood, Mohamed Gnedi, and Robert Wilcox
  * ECE540, Kravitz
- * Final Project, Application app.c
- * 11/25/2023
+ * Final Project, Application main.c
+ * 12/04/2023
  *
  * Platform: RVfpga on the Boolean Board  
  * Description: 
@@ -12,16 +12,8 @@
 #include "hc_sr04.h"
 #include "vga.h"
 #include "ssegment.h"
-
-// GPIO0 Module Registers
-#define RGPIO0_IN       0x80001400
-#define RGPIO0_OUT      0x80001404
-#define RGPIO0_OE       0x80001408
-
-// GPIO1 Module Registers
-#define RGPIO1_IN       0x80001800
-#define RGPIO1_OUT      0x80001804
-#define RGPIO1_OE       0x80001808
+#include "bttn.h"
+#include "switch.h"
 
 #define ALL_LEDS        0x0000FFFF
 #define WAIT_DELAY      1000000
@@ -44,8 +36,9 @@ int main(void) {
     game_state = 0;
     on_off_state = game_state ? ON_STATE : OFF_STATE;
 
-    WR_GPIO(RGPIO0_OE, ALL_LEDS);
-    WR_GPIO(RGPIO1_OE, 0x00000000);
+
+    switch_init(ALL_LEDS);
+    bttn_init(0x00000000);
     sseg_init(0x10);
     delay();
 
@@ -54,12 +47,12 @@ int main(void) {
     sseg_write(on_off_state | (1 << 12));
     delay();
     while(1) {
-        temp_val0    = RD_GPIO(RGPIO1_IN);
-        switch_val   = RD_GPIO(RGPIO0_IN);
+        temp_val0    = bttn_read();
+        switch_val   = switch_read();
         led_val      = switch_val >> 16;
 
-        WR_GPIO(RGPIO0_OUT, led_val);
-
+        switch_write(led_val);
+      
         state     = get_status();
         echo      = get_echo_pulse();
 
@@ -77,6 +70,8 @@ int main(void) {
         // Check if sw[0] is set
         if (switch_val & 0x00010000) {
             game_state = 1;
+            on_off_state = game_state ? ON_STATE : OFF_STATE;
+
             sseg_write(on_off_state | 0);
             
             // Check if the state is DETECTED
