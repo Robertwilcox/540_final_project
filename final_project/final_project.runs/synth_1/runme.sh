@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log cb_filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cb_filter.tcl
+EAStep vivado -log rvfpgaboolean.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rvfpgaboolean.tcl

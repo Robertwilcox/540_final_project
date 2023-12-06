@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log cb_filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cb_filter.tcl" );
+         "-log rvfpgaboolean.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rvfpgaboolean.tcl" );
 
 
 
