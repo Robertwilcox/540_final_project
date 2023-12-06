@@ -44,17 +44,23 @@
 //
 void vga_display_welcome(void);
 
-// vga_display_miss(val):
+// vga_display_miss():
 //
-// Writes to the screen if a miss happened along with the score.
+// Writes to the screen a miss message.
 //
-void vga_display_miss(int _val);
+void vga_display_miss(void);
 
-// vga_display_hit(val):
+// vga_display_hit():
 //
-// Writes to the screen if a hit happened along with the score.
+// Writes to the screen a hit message.
 //
-void vga_display_hit(int _val);
+void vga_display_hit(void);
+
+// vga_display_score(val):
+//
+// Writes to the screen the current score.
+//
+void vga_display_score(int _val);
 
 // _str2ascii(row, col, string):
 //
