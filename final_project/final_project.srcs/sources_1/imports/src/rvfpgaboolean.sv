@@ -75,12 +75,6 @@ module rvfpgaboolean
     output wire        SCLK,
     output wire        SS,
     input wire         MISO,
-    // Might change to wires
-    output wire        o_accel_cs_n,
-    output wire        o_accel_mosi,
-    input wire         i_accel_miso,
-    output wire        accel_sclk
-
     );
 
 
@@ -114,7 +108,7 @@ module rvfpgaboolean
       .o_rst_core (rst_core));
 
   // CMT IP core for Sensor Signals
- clk_wiz_1 clk_div_cmt_hc_sr04
+ clk_wiz_2 clk_div_cmt_hc_sr04
    (.clk_out1        (hc_sr04_sensor_clk),     // output clk_out1 @64 MHz
     .reset           (1'b0),
     .clk_in1         (clk));      // input clk_in1 

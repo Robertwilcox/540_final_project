@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Mon Nov 13 16:14:09 2023
+// Date        : Tue Dec  5 20:25:31 2023
 // Host        : DESKTOP-T2LGR09 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.v
+//               d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.v
 // Design      : clk_wiz_2
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,57 +14,50 @@
 
 (* NotValidForBitStream *)
 module clk_wiz_2
-   (vga_clk,
-    vga_clk_x5,
+   (clk_out1,
     reset,
     locked,
     clk_in1);
-  output vga_clk;
-  output vga_clk_x5;
+  output clk_out1;
   input reset;
   output locked;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
+  wire clk_out1;
   wire locked;
   wire reset;
-  wire vga_clk;
-  wire vga_clk_x5;
 
   clk_wiz_2_clk_wiz inst
        (.clk_in1(clk_in1),
+        .clk_out1(clk_out1),
         .locked(locked),
-        .reset(reset),
-        .vga_clk(vga_clk),
-        .vga_clk_x5(vga_clk_x5));
+        .reset(reset));
 endmodule
 
 module clk_wiz_2_clk_wiz
-   (vga_clk,
-    vga_clk_x5,
+   (clk_out1,
     reset,
     locked,
     clk_in1);
-  output vga_clk;
-  output vga_clk_x5;
+  output clk_out1;
   input reset;
   output locked;
   input clk_in1;
 
   wire clk_in1;
   wire clk_in1_clk_wiz_2;
+  wire clk_out1;
+  wire clk_out1_clk_wiz_2;
   wire clkfbout_buf_clk_wiz_2;
   wire clkfbout_clk_wiz_2;
   wire locked;
   wire reset;
-  wire vga_clk;
-  wire vga_clk_clk_wiz_2;
-  wire vga_clk_x5;
-  wire vga_clk_x5_clk_wiz_2;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
+  wire NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
@@ -93,25 +86,21 @@ module clk_wiz_2_clk_wiz
         .O(clk_in1_clk_wiz_2));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
-       (.I(vga_clk_clk_wiz_2),
-        .O(vga_clk));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout2_buf
-       (.I(vga_clk_x5_clk_wiz_2),
-        .O(vga_clk_x5));
+       (.I(clk_out1_clk_wiz_2),
+        .O(clk_out1));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(31.500000),
+    .CLKFBOUT_MULT_F(10.000000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(25.000000),
+    .CLKOUT0_DIVIDE_F(15.625000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(5),
+    .CLKOUT1_DIVIDE(1),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -137,7 +126,7 @@ module clk_wiz_2_clk_wiz
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
     .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(5),
+    .DIVCLK_DIVIDE(1),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PSEN_INVERTED(1'b0),
     .IS_PSINCDEC_INVERTED(1'b0),
@@ -158,9 +147,9 @@ module clk_wiz_2_clk_wiz
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
-        .CLKOUT0(vga_clk_clk_wiz_2),
+        .CLKOUT0(clk_out1_clk_wiz_2),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(vga_clk_x5_clk_wiz_2),
+        .CLKOUT1(NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),

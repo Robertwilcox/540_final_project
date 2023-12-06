@@ -383,7 +383,7 @@ module veerwolf_core
         .o_vga_blue    (o_vga_blue),
         .o_vga_vid_en  (o_vga_vid_en));
 
-   // RGB LED Controller
+   /*// RGB LED Controller
    rgb_ctrlr_wrapper rgbcon_wrapper
        (.i_clk          (clk),
         .i_rst          (wb_rst),
@@ -397,7 +397,7 @@ module veerwolf_core
         .o_wb_ack       (wb_s2m_rgb_ack),
         .o_rgb0_led     (rgb0),
         .o_rgb1_led     (rgb1));
-
+*/
     // PMOD D Controller
     pmod_D_ctrlr_wrapper pmodD_wrapper
        (.i_clk          (clk),

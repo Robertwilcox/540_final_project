@@ -55,8 +55,7 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// _vga_clk__25.20000______0.000______50.0______470.476____347.350
-// vga_clk_x5__126.00000______0.000______50.0______341.985____347.350
+// clk_out1__64.00000______0.000______50.0______143.752_____98.575
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -72,8 +71,7 @@
   clk_wiz_2 instance_name
    (
     // Clock out ports
-    .vga_clk(vga_clk),     // output vga_clk
-    .vga_clk_x5(vga_clk_x5),     // output vga_clk_x5
+    .clk_out1(clk_out1),     // output clk_out1
     // Status and control signals
     .reset(reset), // input reset
     .locked(locked),       // output locked

@@ -1,0 +1,571 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Dec  5 20:40:37 2023
+# Process ID: 19644
+# Current directory: D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/synth_1
+# Command line: vivado.exe -log cb_filter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cb_filter.tcl
+# Log file: D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/synth_1/cb_filter.vds
+# Journal file: D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/synth_1\vivado.jou
+# Running On: DESKTOP-T2LGR09, OS: Windows, CPU Frequency: 3394 MHz, CPU Physical cores: 16, Host memory: 34282 MB
+#-----------------------------------------------------------
+Sourcing tcl script 'E:/Xilinx/Vivado/2022.2/scripts/Vivado_init.tcl'
+source cb_filter.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/utils_1/imports/synth_1/rvfpgaboolean.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/utils_1/imports/synth_1/rvfpgaboolean.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top cb_filter -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28432
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1200.457 ; gain = 408.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cb_filter' [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cb_filter.sv:43]
+INFO: [Synth 8-6157] synthesizing module 'counter' [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:16]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'delta_counter' [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter STICKY_OVERFLOW bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'delta_counter' (0#1) [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (0#1) [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'hash_block' [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cb_filter.sv:201]
+	Parameter NoHashes bound to: 3 - type: integer 
+	Parameter InpWidth bound to: 32 - type: integer 
+	Parameter HashWidth bound to: 4 - type: integer 
+	Parameter NoRounds bound to: 1 - type: integer 
+	Parameter Seeds bound to: 192'b000100011101001011101000100000010000000000111110011110110111001000000001001011111111100010000110000000000000111100110001100000010000000000000100011111011111010000000011111000100000111010001111 
+INFO: [Synth 8-6157] synthesizing module 'sub_per_hash' [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sub_per_hash.sv:39]
+	Parameter InpWidth bound to: 32 - type: integer 
+	Parameter HashWidth bound to: 4 - type: integer 
+	Parameter NoRounds bound to: 1 - type: integer 
+	Parameter PermuteKey bound to: 32'b00000000000001000111110111110100 
+	Parameter XorKey bound to: 32'b00000011111000100000111010001111 
+INFO: [Synth 8-6155] done synthesizing module 'sub_per_hash' (0#1) [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sub_per_hash.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'sub_per_hash__parameterized0' [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sub_per_hash.sv:39]
+	Parameter InpWidth bound to: 32 - type: integer 
+	Parameter HashWidth bound to: 4 - type: integer 
+	Parameter NoRounds bound to: 1 - type: integer 
+	Parameter PermuteKey bound to: 32'b00000001001011111111100010000110 
+	Parameter XorKey bound to: 32'b00000000000011110011000110000001 
+INFO: [Synth 8-6155] done synthesizing module 'sub_per_hash__parameterized0' (0#1) [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sub_per_hash.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'sub_per_hash__parameterized1' [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sub_per_hash.sv:39]
+	Parameter InpWidth bound to: 32 - type: integer 
+	Parameter HashWidth bound to: 4 - type: integer 
+	Parameter NoRounds bound to: 1 - type: integer 
+	Parameter PermuteKey bound to: 32'b00010001110100101110100010000001 
+	Parameter XorKey bound to: 32'b00000000001111100111101101110010 
+INFO: [Synth 8-6155] done synthesizing module 'sub_per_hash__parameterized1' (0#1) [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/sub_per_hash.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'hash_block' (0#1) [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cb_filter.sv:201]
+INFO: [Synth 8-226] default block is never used [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cb_filter.sv:141]
+INFO: [Synth 8-6155] done synthesizing module 'cb_filter' (0#1) [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cb_filter.sv:43]
+WARNING: [Synth 8-7129] Port data_i[29] in module sub_per_hash__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[21] in module sub_per_hash__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[19] in module sub_per_hash__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[12] in module sub_per_hash__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[9] in module sub_per_hash__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[6] in module sub_per_hash__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2] in module sub_per_hash__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[1] in module sub_per_hash__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[31] in module sub_per_hash__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[27] in module sub_per_hash__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[25] in module sub_per_hash__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[24] in module sub_per_hash__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[16] in module sub_per_hash__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[10] in module sub_per_hash__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[6] in module sub_per_hash__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[3] in module sub_per_hash__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[29] in module sub_per_hash is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[28] in module sub_per_hash is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[26] in module sub_per_hash is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[16] in module sub_per_hash is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[15] in module sub_per_hash is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[12] in module sub_per_hash is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[3] in module sub_per_hash is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2] in module sub_per_hash is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1293.020 ; gain = 500.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1293.020 ; gain = 500.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1293.020 ; gain = 500.820
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1293.020 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:3]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:3]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'tap/tap_dmi/TCK'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:4]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_pins tap/tap_dmi/TCK]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:4]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'tap/tap_dtmcs/TCK'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:5]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_pins tap/tap_dtmcs/TCK]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:5]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'tap/tap_idcode/DRCK'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:6]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_pins tap/tap_idcode/DRCK]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'i_uart_rx'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_uart_tx'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SERVO_PWM'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DC_MOTOR'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_hdmi_clk_n'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_hdmi_clk_p'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_hdmi_d_n[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_hdmi_d_n[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_hdmi_d_n[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_hdmi_d_p[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_hdmi_d_p[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_hdmi_d_p[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_pmodD[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_pmodD[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_pmodD[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_pmodD[3]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_pmodD[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_pmodD[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_pmodD[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_pmodD[3]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[3]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[4]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[5]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[6]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[7]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[8]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[9]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[10]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[11]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[12]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[13]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[14]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_sw[15]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[3]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[4]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[5]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[6]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[7]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[8]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[9]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[10]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[11]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[12]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[13]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[14]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_led[15]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CA'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CB'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CC'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CD'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CE'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CF'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CG'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CA_1'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CB_1'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CC_1'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CD_1'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CE_1'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CF_1'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CG_1'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_bttn[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_bttn[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_bttn[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i_bttn[3]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_rgb0[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_rgb0[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_rgb0[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_rgb1[0]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_rgb1[1]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'o_rgb1[2]'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MISO'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SS'. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1358.930 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1358.930 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    5 Bit       Adders := 17    
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
+	   3 Input      1 Bit         XORs := 36    
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                5 Bit    Registers := 17    
++---Muxes : 
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 51    
+	   2 Input    1 Bit        Muxes := 34    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     2|
+|3     |LUT1   |     1|
+|4     |LUT2   |    18|
+|5     |LUT3   |     1|
+|6     |LUT4   |    46|
+|7     |LUT5   |    76|
+|8     |LUT6   |   150|
+|9     |FDCE   |    85|
+|10    |IBUF   |    80|
+|11    |OBUF   |     8|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1358.930 ; gain = 566.730
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1358.930 ; gain = 500.820
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1358.930 ; gain = 566.730
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1358.930 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1358.930 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 4893e549
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 117 Warnings, 92 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1358.930 ; gain = 940.301
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/synth_1/cb_filter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cb_filter_utilization_synth.rpt -pb cb_filter_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  5 20:41:09 2023...

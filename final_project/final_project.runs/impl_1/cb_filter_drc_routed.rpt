@@ -1,0 +1,55 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Dec  5 20:41:59 2023
+| Host         : DESKTOP-T2LGR09 running 64-bit major release  (build 9200)
+| Command      : report_drc -file cb_filter_drc_routed.rpt -pb cb_filter_drc_routed.pb -rpx cb_filter_drc_routed.rpx
+| Design       : cb_filter
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++--------+------------------+----------------------------+------------+
+| Rule   | Severity         | Description                | Violations |
++--------+------------------+----------------------------+------------+
+| NSTD-1 | Critical Warning | Unspecified I/O Standard   | 1          |
+| UCIO-1 | Critical Warning | Unconstrained Logical Port | 1          |
++--------+------------------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+88 out of 88 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: decr_data_i[14], decr_data_i[15], decr_data_i[16], decr_data_i[17],
+decr_data_i[18], decr_data_i[20], decr_data_i[21], decr_data_i[22],
+decr_data_i[23], decr_data_i[24], decr_data_i[26], decr_data_i[27],
+decr_data_i[29], decr_data_i[30], decr_data_i[31]
+ (the first 15 of 85 listed).
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+88 out of 88 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: decr_data_i[14], decr_data_i[15], decr_data_i[16], decr_data_i[17],
+decr_data_i[18], decr_data_i[20], decr_data_i[21], decr_data_i[22],
+decr_data_i[23], decr_data_i[24], decr_data_i[26], decr_data_i[27],
+decr_data_i[29], decr_data_i[30], decr_data_i[31]
+ (the first 15 of 85 listed).
+Related violations: <none>
+
+

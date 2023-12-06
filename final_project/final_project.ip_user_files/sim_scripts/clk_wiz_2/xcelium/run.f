@@ -5,8 +5,8 @@
   "E:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_clk_wiz.v" \
-  "../../../../project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.v" \
+  "../../../../final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_clk_wiz.v" \
+  "../../../../final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

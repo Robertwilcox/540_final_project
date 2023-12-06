@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="clk_wiz_2_synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1699920817">
+<GenRun Id="clk_wiz_2_synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1701836699">
   <File Type="PA-TCL" Name="clk_wiz_2.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="clk_wiz_2_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="clk_wiz_2_reports.tcl"/>
   <File Type="RDS-RDS" Name="clk_wiz_2.vds"/>
   <File Type="RDS-UTIL" Name="clk_wiz_2_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="clk_wiz_2_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="clk_wiz_2.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="clk_wiz_2_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="clk_wiz_2_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_2">
     <File Path="$PSRCDIR/sources_1/ip/clk_wiz_2/clk_wiz_2.xci">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../proj_2/part_1/project_1/project_1.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xci"/>
-        <Attr Name="ImportTime" Val="1700346874"/>
+        <Attr Name="ImportTime" Val="1699920793"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -25,7 +28,7 @@
     <File Path="$PSRCDIR/sources_1/ip/clk_wiz_2/clk_wiz_2.xci">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../proj_2/part_1/project_1/project_1.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xci"/>
-        <Attr Name="ImportTime" Val="1700346874"/>
+        <Attr Name="ImportTime" Val="1699920793"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
