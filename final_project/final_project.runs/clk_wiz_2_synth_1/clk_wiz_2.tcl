@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.runs/clk_wiz_2_synth_1/clk_wiz_2.tcl"
+  variable script "D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/clk_wiz_2_synth_1/clk_wiz_2.tcl"
   variable category "vivado_synth"
 }
 
@@ -81,12 +81,12 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.cache/wt [current_project]
-set_property parent.project_path D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.xpr [current_project]
+set_property webtalk.parent_dir D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.cache/wt [current_project]
+set_property parent.project_path D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.cache/ip [current_project]
+set_property ip_output_repo d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 set_property include_dirs {
   D:/Fall_2023/ECE_540/HW1/lab5/RVfpga_EL2/RVfpga_Boolean/src/OtherSources/pulp-platform.org__common_cells_1.20.0/include
@@ -94,10 +94,10 @@ set_property include_dirs {
 } [current_fileset]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xci
-set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.xdc]
-set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_ooc.xdc]
+read_ip -quiet D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xci
+set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.xdc]
+set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -113,7 +113,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.runs/clk_wiz_2_synth_1 -new_name clk_wiz_2 -ip [get_ips clk_wiz_2]]
+set cacheID [config_ip_cache -export -no_bom  -dir D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/clk_wiz_2_synth_1 -new_name clk_wiz_2 -ip [get_ips clk_wiz_2]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -168,32 +168,32 @@ create_report "clk_wiz_2_synth_1_synth_report_utilization_0" "report_utilization
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.runs/clk_wiz_2_synth_1/clk_wiz_2.dcp d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.dcp
+  file copy -force D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/clk_wiz_2_synth_1/clk_wiz_2.dcp d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.v
+  write_verilog -force -mode synth_stub d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.vhdl
+  write_vhdl -force -mode synth_stub d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.v
+  write_verilog -force -mode funcsim d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -203,47 +203,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.runs/clk_wiz_2_synth_1/clk_wiz_2.dcp d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.dcp
+  file copy -force D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/clk_wiz_2_synth_1/clk_wiz_2.dcp d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.runs/clk_wiz_2_synth_1/clk_wiz_2_stub.v d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.v
+  file rename -force D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/clk_wiz_2_synth_1/clk_wiz_2_stub.v d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.runs/clk_wiz_2_synth_1/clk_wiz_2_stub.vhdl d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.vhdl
+  file rename -force D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/clk_wiz_2_synth_1/clk_wiz_2_stub.vhdl d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.runs/clk_wiz_2_synth_1/clk_wiz_2_sim_netlist.v d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.v
+  file rename -force D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/clk_wiz_2_synth_1/clk_wiz_2_sim_netlist.v d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.runs/clk_wiz_2_synth_1/clk_wiz_2_sim_netlist.vhdl d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.vhdl
+  file rename -force D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/clk_wiz_2_synth_1/clk_wiz_2_sim_netlist.vhdl d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cacheID 
 
-if {[file isdir D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.ip_user_files/ip/clk_wiz_2]} {
+if {[file isdir D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.ip_user_files/ip/clk_wiz_2]} {
   catch { 
-    file copy -force d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.v D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.ip_user_files/ip/clk_wiz_2
+    file copy -force d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.v D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.ip_user_files/ip/clk_wiz_2
   }
 }
 
-if {[file isdir D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.ip_user_files/ip/clk_wiz_2]} {
+if {[file isdir D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.ip_user_files/ip/clk_wiz_2]} {
   catch { 
-    file copy -force d:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.vhdl D:/Fall_2023/ECE_540/proj_2/part_1/project_1/project_1.ip_user_files/ip/clk_wiz_2
+    file copy -force d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_stub.vhdl D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.ip_user_files/ip/clk_wiz_2
   }
 }
 file delete __synthesis_is_running__

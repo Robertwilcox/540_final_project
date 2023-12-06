@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -133,13 +132,14 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.cache/wt [current_project]
   set_property parent.project_path D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.xpr [current_project]
+  set_property ip_output_repo D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.runs/synth_1/rvfpgaboolean.dcp
-  read_ip -quiet D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
   read_ip -quiet D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc
 OPTRACE "read constraints: implementation" END { }

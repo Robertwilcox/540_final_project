@@ -27,7 +27,7 @@
 	parameter DIVIDE_COUNT = 500,	// Clock divider terminal count
 	
 	parameter POLARITY = 1'b1,		// 1 to drive PWM output high when active.  0 to invert the PWM output
-	parameter MAX_COUNT = 8		// maximum count for the PWM counters
+	parameter MAX_COUNT = 2048		// maximum count for the PWM counters
 )
 (
 	input wire 			clk,			// input clock	
@@ -121,9 +121,6 @@ always @(posedge clkPWM)begin
 		end
 	end
 end // latch duty cycle registers
-
-// For each color, if 'enable' is true and the latched duty cycle is greater than the current count,
-// the output is set to POLARITY, otherwise it is set to the inverse of POLARITY.
 
 // generate the PWM outputs
 assign rgbRED = (enable && (redDC_latch > count)) ? POLARITY : ~POLARITY;

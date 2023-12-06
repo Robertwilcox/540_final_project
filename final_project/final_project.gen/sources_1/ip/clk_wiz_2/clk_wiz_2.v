@@ -56,8 +56,7 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// _vga_clk__25.20000______0.000______50.0______470.476____347.350
-// vga_clk_x5__126.00000______0.000______50.0______341.985____347.350
+// clk_out1__64.00000______0.000______50.0______143.752_____98.575
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -66,13 +65,12 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "clk_wiz_2,clk_wiz_v6_0_11_0_0,{component_name=clk_wiz_2,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=2,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "clk_wiz_2,clk_wiz_v6_0_11_0_0,{component_name=clk_wiz_2,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=1,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module clk_wiz_2 
  (
   // Clock out ports
-  output        vga_clk,
-  output        vga_clk_x5,
+  output        clk_out1,
   // Status and control signals
   input         reset,
   output        locked,
@@ -83,8 +81,7 @@ module clk_wiz_2
   clk_wiz_2_clk_wiz inst
   (
   // Clock out ports  
-  .vga_clk(vga_clk),
-  .vga_clk_x5(vga_clk_x5),
+  .clk_out1(clk_out1),
   // Status and control signals               
   .reset(reset), 
   .locked(locked),

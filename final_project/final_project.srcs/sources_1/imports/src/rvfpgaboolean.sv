@@ -69,8 +69,12 @@ module rvfpgaboolean
     output reg [7:0]   AN,
     output reg         CA, CB, CC, CD, CE, CF, CG, CA_1, CB_1, CC_1, CD_1, CE_1, CF_1, CG_1,
     output wire        SERVO_PWM,
-    output wire        DC_MOTOR 
+    output wire        DC_MOTOR, 
 
+    // Final Project - Joystick lines
+    output wire        SCLK,
+    output wire        SS,
+    input wire         MISO
     );
 
 
@@ -104,7 +108,7 @@ module rvfpgaboolean
       .o_rst_core (rst_core));
 
   // CMT IP core for Sensor Signals
- clk_wiz_1 clk_div_cmt_hc_sr04
+ clk_wiz_2 clk_div_cmt_hc_sr04
    (.clk_out1        (hc_sr04_sensor_clk),     // output clk_out1 @64 MHz
     .reset           (1'b0),
     .clk_in1         (clk));      // input clk_in1 
@@ -327,7 +331,10 @@ module rvfpgaboolean
       .AN (AN),
       .Digits_Bits ({CA,CB,CC,CD,CE,CF,CG}),
       .servo_pwm_out                 (SERVO_PWM),
-      .dc_pwm_out                    (DC_MOTOR)
+      .dc_pwm_out                    (DC_MOTOR),
+      .o_jstk_sclk    (SCLK),
+      .o_jstk_cs_n    (SS),
+      .i_jstk_miso    (MISO)
       );
 
    always @(posedge clk_core) begin

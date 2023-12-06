@@ -191,7 +191,15 @@ module veerwolf_core
     output wire [ 7          :0] AN,
     output wire [ 6          :0] Digits_Bits,
     output wire        servo_pwm_out,
-    output wire        dc_pwm_out
+    output wire        dc_pwm_out,
+    output wire        o_accel_sclk,
+    output wire        o_accel_cs_n,
+    output wire        o_accel_mosi,
+    input wire         i_accel_miso,
+    inout wire  [4:0]  io_data2,
+    output wire        o_jstk_sclk,
+    output wire        o_jstk_cs_n,
+    input wire         i_jstk_miso
     );
 
 
@@ -375,7 +383,7 @@ module veerwolf_core
         .o_vga_blue    (o_vga_blue),
         .o_vga_vid_en  (o_vga_vid_en));
 
-   // RGB LED Controller
+   /*// RGB LED Controller
    rgb_ctrlr_wrapper rgbcon_wrapper
        (.i_clk          (clk),
         .i_rst          (wb_rst),
@@ -389,7 +397,7 @@ module veerwolf_core
         .o_wb_ack       (wb_s2m_rgb_ack),
         .o_rgb0_led     (rgb0),
         .o_rgb1_led     (rgb1));
-
+*/
     // PMOD D Controller
     pmod_D_ctrlr_wrapper pmodD_wrapper
        (.i_clk          (clk),
@@ -565,7 +573,32 @@ module veerwolf_core
         .wb_dat_i       (wb_m2s_dcMotor_dat),                   // Wishbone data input
         .wb_ack         (wb_s2m_dcMotor_ack),                   // Wishbone acknowledge (output)
         .wb_dat_o       (wb_s2m_dcMotor_dat)                    // Wishbone data output (output)
-    );
+        );
+
+    // ================================================================================================
+    // ================================================================================================
+    //=================================================================================================
+    // Made by:     Mohamed Gnedi
+    // Task:        Final Project
+    // Signal definitions are found in the (wb_intercon.vh)
+       PmodJSTK_Demo Pmod_Joystick(
+            .wb_clk_i     (clk), 
+            .wb_rst_i     (wb_rst), 
+            .wb_cyc_i     (wb_m2s_jstk_cyc), 
+            .wb_adr_i     ({2'b0,wb_m2s_jstk_adr[5:2],2'b0}), 
+            .wb_dat_i     (wb_m2s_jstk_dat), 
+            .wb_sel_i     (wb_m2s_jstk_sel),
+            .wb_we_i      (wb_m2s_jstk_we), 
+            .wb_stb_i     (wb_m2s_jstk_stb), 
+            .wb_dat_o     (wb_s2m_jstk_dat),
+            .wb_ack_o     (wb_s2m_jstk_ack), 
+            .wb_err_o     (wb_s2m_jstk_err),
+            // External Joystick SPI Interface
+            .MISO         (i_jstk_miso),
+            .SS           (o_jstk_cs_n),
+            .SCLK         (o_jstk_sclk)
+            );  
+    //=================================================================================================
 
    ptc_top timer_ptc(
         .wb_clk_i     (clk), 

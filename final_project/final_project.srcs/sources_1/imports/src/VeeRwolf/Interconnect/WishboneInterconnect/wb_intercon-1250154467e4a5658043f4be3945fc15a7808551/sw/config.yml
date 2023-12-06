@@ -3,7 +3,7 @@ vlnv: ::wb_intercon:0
 parameters:
     masters:
       io:
-        slaves: [rom, sys, spi_flash, spi_accel, ptc, gpio, vga, servo, pmod_D, dcMotor, gpio1, rgb, uart]
+        slaves: [rom, sys, spi_flash, spi_accel, ptc, gpio, vga, servo, pmod_D, dcMotor, gpio1, jstk, rgb, uart]
     slaves:
       rom:
         offset : 0x00000000
@@ -38,8 +38,11 @@ parameters:
       gpio1:
         offset : 0x00001800
         size : 0x00000040
-      rgb:
+      jstk:
         offset : 0x00001900
+        size : 0x00000040  
+      rgb:
+        offset : 0x00001940
         size : 0x00000040
       uart:
         offset : 0x00002000

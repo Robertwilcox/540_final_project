@@ -72,7 +72,6 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.maxThreads 8
 set_param chipscope.maxJobs 4
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -85,6 +84,7 @@ set_property parent.project_path D:/Fall_2023/ECE_540/final_proj/git/540_final_p
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_output_repo d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 set_property include_dirs {
   D:/Fall_2023/ECE_540/HW1/lab5/RVfpga_EL2/RVfpga_Boolean/src/OtherSources/pulp-platform.org__common_cells_1.20.0/include
@@ -97,8 +97,8 @@ read_verilog {
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/gpio/gpio_defines.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/ptc/ptc_defines.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_defines.v
-  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon.vh
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/axi_intercon.vh
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon-1250154467e4a5658043f4be3945fc15a7808551/sw/wb_intercon.vh
   D:/Fall_2023/ECE_540/HW1/lab5/RVfpga_EL2/RVfpga_Boolean/src/OtherSources/pulp-platform.org__common_cells_1.20.0/include/common_cells/registers.svh
   D:/Fall_2023/ECE_540/HW1/lab5/RVfpga_EL2/RVfpga_Boolean/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/include/axi/assign.svh
   D:/Fall_2023/ECE_540/HW1/lab5/RVfpga_EL2/RVfpga_Boolean/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/include/axi/typedef.svh
@@ -116,6 +116,7 @@ set_property file_type "Verilog Header" [get_files D:/Fall_2023/ECE_540/final_pr
 read_mem D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/BootROM/sw/boot_main.mem
 read_verilog -library xil_defaultlib -sv {
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_pdef.vh
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/vga/CHAR_ROM.sv
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cf_math_pkg.sv
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/addr_decode.sv
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_pkg.sv
@@ -175,16 +176,23 @@ read_verilog -library xil_defaultlib -sv {
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/PMODD_controller/ultrasonic_sensor.sv
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/veer_el2_wrapper.sv
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/SystemController/veerwolf_syscon.sv
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/vga/vga_ctrlr.sv
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/rvfpgaboolean.sv
 }
 set_property file_type SystemVerilog [get_files D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_pdef.vh]
 set_property is_global_include true [get_files D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_pdef.vh]
 read_verilog -library xil_defaultlib {
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/jstk/ClkDiv_5Hz.v
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/jstk/ClkDiv_66_67kHz.v
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/jstk/PmodJSTK.v
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/jstk/PmodJSTK_Demo.v
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/jstk/SPImode0.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiToWb/axi2wb.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/axi_ram.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/clk_gen_boolean.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/dcMotor/dc_motor_controller.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/BootROM/dpram64.v
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/vga/dtg.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/hdmi_tx_1.0/hdl/encode.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/gpio/gpio_top.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/hdmi_tx_1.0/hdl/hdmi_tx_v1_0.v
@@ -193,6 +201,7 @@ read_verilog -library xil_defaultlib {
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/raminfr.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/hdmi_tx_1.0/hdl/serdes_10_to_1.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/servo/servo_controller.v
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/jstk/spiCtrl.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/OtherSources/hdmi_tx_1.0/hdl/srldelay.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_receiver.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_regs.v
@@ -203,19 +212,20 @@ read_verilog -library xil_defaultlib {
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_transmitter.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_wb.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/veerwolf_core.v
+  D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Peripherals/vga/vga_ctrlr_wrapper.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/BootROM/wb_mem_wrapper.v
   D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/rtl/verilog/wb_mux.v
 }
-read_ip -quiet D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
-set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc]
-set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_ooc.xdc]
-
 read_ip -quiet D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+
+read_ip -quiet D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xci
+set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2.xdc]
+set_property used_in_implementation false [get_files -all d:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.gen/sources_1/ip/clk_wiz_2/clk_wiz_2_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -229,8 +239,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc
 set_property used_in_implementation false [get_files D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/constrs_1/imports/src/rvfpgaboolean.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental D:/Fall_2023/ECE_540/final_proj/git/540_final_project/final_project/final_project.srcs/utils_1/imports/synth_1/rvfpgaboolean.dcp
