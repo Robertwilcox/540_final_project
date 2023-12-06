@@ -144,6 +144,18 @@ wire [31:0] wb_s2m_gpio1_dat;
 wire        wb_s2m_gpio1_ack;
 wire        wb_s2m_gpio1_err;
 wire        wb_s2m_gpio1_rty;
+wire [31:0] wb_m2s_jstk_adr;
+wire [31:0] wb_m2s_jstk_dat;
+wire  [3:0] wb_m2s_jstk_sel;
+wire        wb_m2s_jstk_we;
+wire        wb_m2s_jstk_cyc;
+wire        wb_m2s_jstk_stb;
+wire  [2:0] wb_m2s_jstk_cti;
+wire  [1:0] wb_m2s_jstk_bte;
+wire [31:0] wb_s2m_jstk_dat;
+wire        wb_s2m_jstk_ack;
+wire        wb_s2m_jstk_err;
+wire        wb_s2m_jstk_rty;
 wire [31:0] wb_m2s_rgb_adr;
 wire [31:0] wb_m2s_rgb_dat;
 wire  [3:0] wb_m2s_rgb_sel;
@@ -316,6 +328,18 @@ wb_intercon wb_intercon0
     .wb_gpio1_ack_i     (wb_s2m_gpio1_ack),
     .wb_gpio1_err_i     (wb_s2m_gpio1_err),
     .wb_gpio1_rty_i     (wb_s2m_gpio1_rty),
+    .wb_jstk_adr_o      (wb_m2s_jstk_adr),
+    .wb_jstk_dat_o      (wb_m2s_jstk_dat),
+    .wb_jstk_sel_o      (wb_m2s_jstk_sel),
+    .wb_jstk_we_o       (wb_m2s_jstk_we),
+    .wb_jstk_cyc_o      (wb_m2s_jstk_cyc),
+    .wb_jstk_stb_o      (wb_m2s_jstk_stb),
+    .wb_jstk_cti_o      (wb_m2s_jstk_cti),
+    .wb_jstk_bte_o      (wb_m2s_jstk_bte),
+    .wb_jstk_dat_i      (wb_s2m_jstk_dat),
+    .wb_jstk_ack_i      (wb_s2m_jstk_ack),
+    .wb_jstk_err_i      (wb_s2m_jstk_err),
+    .wb_jstk_rty_i      (wb_s2m_jstk_rty),
     .wb_rgb_adr_o       (wb_m2s_rgb_adr),
     .wb_rgb_dat_o       (wb_m2s_rgb_dat),
     .wb_rgb_sel_o       (wb_m2s_rgb_sel),

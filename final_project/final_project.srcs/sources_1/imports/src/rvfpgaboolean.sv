@@ -69,7 +69,17 @@ module rvfpgaboolean
     output reg [7:0]   AN,
     output reg         CA, CB, CC, CD, CE, CF, CG, CA_1, CB_1, CC_1, CD_1, CE_1, CF_1, CG_1,
     output wire        SERVO_PWM,
-    output wire        DC_MOTOR 
+    output wire        DC_MOTOR, 
+
+    // Final Project - Joystick lines
+    output wire        SCLK,
+    output wire        SS,
+    input wire         MISO,
+    // Might change to wires
+    output wire        o_accel_cs_n,
+    output wire        o_accel_mosi,
+    input wire         i_accel_miso,
+    output wire        accel_sclk
 
     );
 
@@ -327,7 +337,14 @@ module rvfpgaboolean
       .AN (AN),
       .Digits_Bits ({CA,CB,CC,CD,CE,CF,CG}),
       .servo_pwm_out                 (SERVO_PWM),
-      .dc_pwm_out                    (DC_MOTOR)
+      .dc_pwm_out                    (DC_MOTOR),
+      .o_jstk_sclk    (SCLK),
+      .o_jstk_cs_n    (SS),
+      .i_jstk_miso    (MISO),
+      .o_accel_sclk   (accel_sclk),
+      .o_accel_cs_n   (o_accel_cs_n),
+      .o_accel_mosi   (o_accel_mosi),
+      .i_accel_miso   (i_accel_miso)
       );
 
    always @(posedge clk_core) begin
