@@ -1,0 +1,91 @@
+[
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\main_shooter.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\main_shooter.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/main_shooter.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\servo_control.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\servo_control.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/servo_control.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\joystick_wrapper.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\joystick_wrapper.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/joystick_wrapper.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\D_\\Fall_2023\\ECE_540\\final_proj\\C\\common\\drivers\\uart\\uart_send_char.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\common\\drivers\\uart\\uart_send_char.c",
+  "file": "D:\\Fall_2023\\ECE_540\\final_proj\\C\\common\\drivers\\uart\\uart_send_char.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\motor_control.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\motor_control.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/motor_control.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\buttons.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\buttons.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/buttons.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\joystick_display.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\joystick_display.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/joystick_display.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\vga.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\vga.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/vga.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\bttn.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\bttn.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/bttn.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\hc_sr04.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\hc_sr04.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/hc_sr04.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\ssegment.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\ssegment.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/ssegment.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\switch.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\switch.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/switch.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\src\\joystick_control.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\servo_test\\src\\joystick_control.c",
+  "file": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/src/joystick_control.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\D_\\Fall_2023\\ECE_540\\final_proj\\C\\common\\ee_printf\\ee_printf.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\common\\ee_printf\\ee_printf.c",
+  "file": "D:\\Fall_2023\\ECE_540\\final_proj\\C\\common\\ee_printf\\ee_printf.c"
+},
+
+{
+  "directory": "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build",
+  "command": "E:\\Catapult\\catapult-sdk_1.8.1\\build\\..\\bin\\riscv64-img-elf-gcc.exe -DCPU_FREQ=25000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\\\"RVfpgaBasys3_periph.h\\\" -DPLATFORM_H=\\\"swerv_csr.h\\\" -DUART -ID:/Fall_2023/ECE_540/final_proj/C/common -ID:/Fall_2023/ECE_540/final_proj/C/common/ee_printf -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart/RVfpga -IE:/Catapult/catapult-sdk_1.8.1/build/platform/RVfpga -ID:/Fall_2023/ECE_540/final_proj/C/common/drivers/uart  -g   -O0 -g -march=rv32imc_zicsr_zifencei -mabi=ilp32 -o CMakeFiles\\VGA_test.elf.dir\\D_\\Fall_2023\\ECE_540\\final_proj\\C\\common\\drivers\\uart\\RVfpga\\config_uart.c.obj   -c D:\\Fall_2023\\ECE_540\\final_proj\\C\\common\\drivers\\uart\\RVfpga\\config_uart.c",
+  "file": "D:\\Fall_2023\\ECE_540\\final_proj\\C\\common\\drivers\\uart\\RVfpga\\config_uart.c"
+}
+]
