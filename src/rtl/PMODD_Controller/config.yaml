@@ -30,7 +30,7 @@ parameters:
       offset : 0x00001500
       size : 0x00000040 
     pmod_D:
-      offset : 0x00001640
+      offset : 0x00001600
       size : 0x00000040
     gpio1:
       offset : 0x00001800
