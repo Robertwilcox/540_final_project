@@ -1,0 +1,18 @@
+# ninja log v5
+0	25	0	clean	6d4606480a4c10b0
+25	1493	7236127786779588	CMakeFiles/VGA_test.elf.dir/src/joystick_wrapper.c.obj	282bb078efa4da7a
+283	517	7236127776765729	CMakeFiles/VGA_test.elf.dir/src/buttons.c.obj	e0adf6c67aa1251c
+43	346	7236127774786945	CMakeFiles/VGA_test.elf.dir/src/motor_control.c.obj	4d46e82e809c7f1f
+38	281	7236127774397188	CMakeFiles/VGA_test.elf.dir/C_/Users/ibrahimbinmahfood/workspace/540_final_project/C_programs/robert_apps/common/drivers/uart/uart_send_char.c.obj	c4ed1d810a3aadc4
+613	1129	7236127782462250	CMakeFiles/VGA_test.elf.dir/src/ssegment.c.obj	78ae5262c796725c
+3	293	7236127774567085	CMakeFiles/VGA_test.elf.dir/src/main_shooter.c.obj	3948d724fec60810
+9	1555	7236127787379232	CMakeFiles/VGA_test.elf.dir/src/servo_control.c.obj	7f91dd5a77cdbc55
+489	952	7236127780583387	CMakeFiles/VGA_test.elf.dir/src/switch.c.obj	363f5c3be17f2a63
+347	613	7236127777295421	CMakeFiles/VGA_test.elf.dir/src/hc_sr04.c.obj	26d1901cfd856768
+304	1026	7236127781213008	CMakeFiles/VGA_test.elf.dir/src/vga.c.obj	d6006f9a20ee0172
+962	1236	7236127784041288	CMakeFiles/VGA_test.elf.dir/C_/Users/ibrahimbinmahfood/workspace/540_final_project/C_programs/robert_apps/common/drivers/uart/RVfpga/config_uart.c.obj	4b3ccf6262cadc45
+518	961	7236127780713316	CMakeFiles/VGA_test.elf.dir/src/joystick_control.c.obj	5870256e4bfaab76
+49	304	7236127774667018	CMakeFiles/VGA_test.elf.dir/src/joystick_display.c.obj	6fab8fbc2243e92a
+953	1388	7236127785700252	CMakeFiles/VGA_test.elf.dir/C_/Users/ibrahimbinmahfood/workspace/540_final_project/C_programs/robert_apps/common/ee_printf/ee_printf.c.obj	c38d27f5d0d77581
+294	489	7236127776695773	CMakeFiles/VGA_test.elf.dir/src/bttn.c.obj	921215a008057301
+1555	2725	7236127799012086	VGA_test.elf	4f3719122246de80
