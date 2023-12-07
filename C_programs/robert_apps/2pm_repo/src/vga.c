@@ -45,6 +45,9 @@ void vga_display_miss(void) {
     col = 300;
 
     _str2ascii(row, col, "miss!");
+    _str2ascii(row, col, "miss!");
+    _str2ascii(row, col, "miss!"); 
+    _str2ascii(row, col, "miss!");
 }
 
 // vga_display_hit(val):
@@ -55,6 +58,9 @@ void vga_display_hit(void) {
     row = 240;
     col = 300;
 
+    _str2ascii(row, col, "hit!"); 
+    _str2ascii(row, col, "hit!"); 
+    _str2ascii(row, col, "hit!"); 
     _str2ascii(row, col, "hit!"); 
 }
 
@@ -72,7 +78,7 @@ void vga_display_score(int _val) {
     col = 306;
     _str2ascii(row, col, "score ");
 
-    col = 312;
+    col = 362;
     _str2ascii(row, col, num_val);
 }
 

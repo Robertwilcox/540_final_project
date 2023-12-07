@@ -25,35 +25,35 @@ int main() {
     bool motor_state = false;
     turnOffDCMotor();
     vga_display_welcome();
+    for (int i = DEBOUNCE_DELAY; i > 0; i--){}
 
     int score = 0;  // Initialize the score
 
     int bttn[4] = {0};
     int switch_val, led_val;
     int temp_val0;
-    int state, echo;
+    int prev_state_i[10];
+    int prev_state_f;
+    int curr_state, echo;
 
-    if(!get_status()) {
-        turnOnDCMotor();
-    }
-
+    bttn_init(0x0);
     while (1) {
 
-        /*
+        
         temp_val0    = bttn_read();
-        switch_val   = switch_read();
-        led_val      = switch_val >> 16;
+    
+    //    switch_val   = switch_read();
+      //  led_val      = switch_val >> 16;
 
-        switch_write(led_val);
+        //switch_write(led_val);
       
-        state     = get_status();
-        echo      = get_echo_pulse();
+        //state     = get_status();
+        //echo      = get_echo_pulse();
 
         bttn[0] = temp_val0 & (0x00000001); // Mask BTN[0]
         bttn[1] = temp_val0 & (0x00000002); // Mask BTN[1]  
         bttn[2] = temp_val0 & (0x00000004); // Mask BTN[2]  
         bttn[3] = temp_val0 & (0x00000008); // Mask BTN[3]  
-    */
 
         if (isJoystickLeft()) {
             servoMoveCCW();
@@ -67,9 +67,9 @@ int main() {
             servoStop();
             write_x_data();
         } 
-        else if (isButtonPressed0()) {
+        if (bttn[0]) {
             debounceDelay();
-            if (isButtonPressed0()) {  // Check the button state again after the delay
+            if (bttn[0]) {  // Check the button state again after the delay
                 if (!motor_state) {
                     turnOnDCMotor();
                     motor_state = true;
@@ -81,14 +81,31 @@ int main() {
         }
         
         // Sensor detection and score update
-        state = get_status();
+        prev_state_i[0] = get_status();
         echo = get_echo_pulse();
+        
+        prev_state_i[1] = get_status();
+        prev_state_i[2] = get_status();
+        prev_state_i[3] = get_status();
+        prev_state_i[4] = get_status();
+        prev_state_i[5] = get_status();
+        prev_state_i[6] = get_status();
+        prev_state_i[7] = get_status();
+        prev_state_i[8] = get_status();
+        prev_state_i[9] = get_status();
 
-        if (echo) {
+        curr_state = get_status() ? 0 : 1;
+
+        for (int i = 0; i < 10; i++) {
+            prev_state_f = prev_state_i[i] ? 1 : 0;
+            for (int i = DEBOUNCE_DELAY; i>0; i--){}
+        }
+
+        if ((!curr_state) && (prev_state_f)) {
             score++;  // Increment score if sensor detects something
             vga_display_hit();  // Display "Hit" message
         } else {
-            vga_display_miss();  // Display "Miss" message
+            vga_display_score(score);  // Display "Miss" message
         }
 
         // Display the score on the VGA

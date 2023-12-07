@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "E:/Catapult/catapult-sdk_1.8.1/build/../bin/riscv64-img-elf-gcc.exe")
+set(CMAKE_C_COMPILER "C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/build/../bin/riscv64-img-elf-gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "13.1.0")
@@ -17,11 +17,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "E:/Catapult/catapult-sdk_1.8.1/build/../bin/riscv64-img-elf-ar.exe")
-set(CMAKE_C_COMPILER_AR "E:/Catapult/catapult-sdk_1.8.1/bin/riscv64-img-elf-gcc-ar.exe")
-set(CMAKE_RANLIB "E:/Catapult/catapult-sdk_1.8.1/build/../bin/riscv64-img-elf-ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "E:/Catapult/catapult-sdk_1.8.1/bin/riscv64-img-elf-gcc-ranlib.exe")
-set(CMAKE_LINKER "E:/Catapult/catapult-sdk_1.8.1/bin/riscv64-img-elf-ld.exe")
+set(CMAKE_AR "C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/build/../bin/riscv64-img-elf-ar.exe")
+set(CMAKE_C_COMPILER_AR "C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/bin/riscv64-img-elf-gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/build/../bin/riscv64-img-elf-ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/bin/riscv64-img-elf-gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/bin/riscv64-img-elf-ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -70,7 +70,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "E:/Catapult/catapult-sdk_1.8.1/riscv64-img-elf/include-tiny;E:/Catapult/catapult-sdk_1.8.1/lib/gcc/riscv64-img-elf/13.1.0/include;E:/Catapult/catapult-sdk_1.8.1/lib/gcc/riscv64-img-elf/13.1.0/include-fixed;E:/Catapult/catapult-sdk_1.8.1/riscv64-img-elf/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/riscv64-img-elf/include-tiny;C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/lib/gcc/riscv64-img-elf/13.1.0/include;C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/lib/gcc/riscv64-img-elf/13.1.0/include-fixed;C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/riscv64-img-elf/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc;c_tiny;gcc")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/jenkins/workspace/REL-sdk_build_gnu_tools-windows/build_x86_64-win32/riscv64-img-elf/lib;E:/Catapult/catapult-sdk_1.8.1/lib/gcc/riscv64-img-elf/13.1.0;E:/Catapult/catapult-sdk_1.8.1/lib/gcc;E:/Catapult/catapult-sdk_1.8.1/riscv64-img-elf/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/jenkins/workspace/REL-sdk_build_gnu_tools-windows/build_x86_64-win32/riscv64-img-elf/lib;C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/lib/gcc/riscv64-img-elf/13.1.0;C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/lib/gcc;C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/riscv64-img-elf/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

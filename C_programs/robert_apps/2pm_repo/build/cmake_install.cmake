@@ -1,4 +1,4 @@
-# Install script for directory: D:/Fall_2023/ECE_540/final_proj/C/servo_test
+# Install script for directory: C:/Users/ibrahimbinmahfood/workspace/540_final_project/C_programs/robert_apps/2pm_repo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Fall_2023/ECE_540/final_proj/C/servo_test/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/ibrahimbinmahfood/workspace/540_final_project/C_programs/robert_apps/2pm_repo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

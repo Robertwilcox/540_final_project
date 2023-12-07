@@ -1,9 +1,9 @@
-set(CMAKE_HOST_SYSTEM "Windows-10.0.22621")
+set(CMAKE_HOST_SYSTEM "Windows-10.0.19045")
 set(CMAKE_HOST_SYSTEM_NAME "Windows")
-set(CMAKE_HOST_SYSTEM_VERSION "10.0.22621")
+set(CMAKE_HOST_SYSTEM_VERSION "10.0.19045")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
-include("E:/Catapult/catapult-sdk_1.8.1/build/riscv-toolchain-gcc-elf.cmake")
+include("C:/Users/ibrahimbinmahfood/imgtec/catapult-sdk_1.8.1/build/riscv-toolchain-gcc-elf.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")
