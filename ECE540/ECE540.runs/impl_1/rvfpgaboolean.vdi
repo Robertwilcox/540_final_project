@@ -1,0 +1,820 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Dec  6 08:17:24 2023
+# Process ID: 6404
+# Current directory: C:/Users/ibrahimbinmahfood/ECE540/ECE540.runs/impl_1
+# Command line: vivado.exe -log rvfpgaboolean.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source rvfpgaboolean.tcl -notrace
+# Log file: C:/Users/ibrahimbinmahfood/ECE540/ECE540.runs/impl_1/rvfpgaboolean.vdi
+# Journal file: C:/Users/ibrahimbinmahfood/ECE540/ECE540.runs/impl_1\vivado.jou
+# Running On: DESKTOP-AK79ALB, OS: Windows, CPU Frequency: 2494 MHz, CPU Physical cores: 2, Host memory: 17082 MB
+#-----------------------------------------------------------
+source rvfpgaboolean.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 395.082 ; gain = 61.074
+Command: link_design -top rvfpgaboolean -part xc7s50csga324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.dcp' for cell 'clk_div_cmt_hc_sr04'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_div_cmt_vga'
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 945.414 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1674 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_div_cmt_hc_sr04/inst/clkin1_ibufg, from the path connected to top-level port: clk 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_div_cmt_vga/inst/clkin1_ibufg, from the path connected to top-level port: clk 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_div_cmt_hc_sr04/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_div_cmt_vga/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_div_cmt_vga/inst'
+Finished Parsing XDC File [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_div_cmt_vga/inst'
+Parsing XDC File [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_div_cmt_vga/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1639.070 ; gain = 497.668
+Finished Parsing XDC File [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_div_cmt_vga/inst'
+Parsing XDC File [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'clk_div_cmt_hc_sr04/inst'
+Finished Parsing XDC File [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'clk_div_cmt_hc_sr04/inst'
+Parsing XDC File [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'clk_div_cmt_hc_sr04/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc:57]
+Finished Parsing XDC File [c:/Users/ibrahimbinmahfood/ECE540/ECE540.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'clk_div_cmt_hc_sr04/inst'
+Parsing XDC File [C:/Users/ibrahimbinmahfood/Desktop/PSU-F23/ECE-540/Projects/Project1/RVfpga_EL2/RVfpga_Boolean/src/rvfpgaboolean.xdc]
+Finished Parsing XDC File [C:/Users/ibrahimbinmahfood/Desktop/PSU-F23/ECE-540/Projects/Project1/RVfpga_EL2/RVfpga_Boolean/src/rvfpgaboolean.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1639.070 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 342 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 20 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 272 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 44 instances
+
+12 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 1639.070 ; gain = 1211.113
+Command: opt_design -sweep
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1639.070 ; gain = 0.000
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+
+Phase 1 Sweep
+Phase 1 Sweep | Checksum: 197bea125
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1955.852 ; gain = 102.043
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 38 cells
+INFO: [Opt 31-1021] In phase Sweep, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Post Processing Netlist
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/mem/iccm.iccm/r0_data/genblock.dffs/dout[0]_i_1__51 into driver instance veerwolf/rvtop/veer/ifu/i___277, which resulted in an inversion of 65 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dbg/dbg_data1_reg/genblock.genblock.dff/genblock.dffs/gen_spill_reg.a_data_q[aw_chan][addr][2]_i_1 into driver instance veerwolf/rvtop/veer/dbg/dbg_data1_reg/genblock.genblock.dff/genblock.dffs/gen_spill_reg.a_data_q[aw_chan][addr][2]_i_2, which resulted in an inversion of 81 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dbg/dmcommand_reg/genblock.genblock.dff/genblock.dffs/dout[48]_i_1__2 into driver instance veerwolf/rvtop/veer/dbg/dmcommand_reg/genblock.genblock.dff/genblock.dffs/i___23_i_1__0, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dbg/dmcommand_reg/genblock.genblock.dff/genblock.dffs/dout[4]_i_1__22 into driver instance veerwolf/rvtop/veer/dbg/dmcommand_reg/genblock.genblock.dff/genblock.dffs/dout[4]_i_2__10, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dbg/dmcommand_reg/genblock.genblock.dff/genblock.dffs/dout[54]_i_1__1 into driver instance veerwolf/rvtop/veer/dbg/dmcommand_reg/genblock.genblock.dff/genblock.dffs/i__i_1, which resulted in an inversion of 7 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dbg/sb_state_reg/genblock.dffs/dout[3]_i_1__108 into driver instance veerwolf/rvtop/veer/dbg/sb_state_reg/genblock.dffs/dout[3]_i_3__26, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/decode/cam_array[1].cam_ff/genblock.dff/genblock.dffs/dout[28]_i_1__72 into driver instance veerwolf/rvtop/veer/dec/decode/cam_array[1].cam_ff/genblock.dff/genblock.dffs/dout[28]_i_2__18, which resulted in an inversion of 9 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/decode/cam_array[1].cam_ff/genblock.dff/genblock.dffs/dout[3]_i_1__120 into driver instance veerwolf/rvtop/veer/dec/decode/cam_array[1].cam_ff/genblock.dff/genblock.dffs/dout[0]_i_2__87, which resulted in an inversion of 169 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/tlu/dcsr_ff/genblock.genblock.dff/genblock.dffs/dout[9]_i_1__27 into driver instance veerwolf/rvtop/veer/dec/tlu/dcsr_ff/genblock.genblock.dff/genblock.dffs/i___291_i_2, which resulted in an inversion of 56 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/tlu/halt_ff/genblock.dff/genblock.dffs/dout[15]_i_1__20 into driver instance veerwolf/rvtop/veer/dec/tlu/halt_ff/genblock.dff/genblock.dffs/dout[15]_i_2__7, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/tlu/halt_ff/genblock.dff/genblock.dffs/dout[17]_i_1__19 into driver instance veerwolf/rvtop/veer/dec/i___107, which resulted in an inversion of 7 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/tlu/mstatus_ff/genblock.dff/genblock.dffs/dout[11]_i_1__13 into driver instance veerwolf/rvtop/veer/dec/tlu/mstatus_ff/genblock.dff/genblock.dffs/dout[36]_i_5, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/tlu/mstatus_ff/genblock.dff/genblock.dffs/dout[1]_i_1__252 into driver instance veerwolf/rvtop/mem/i_, which resulted in an inversion of 5 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/tlu/mstatus_ff/genblock.dff/genblock.dffs/dout[23]_i_1__9 into driver instance veerwolf/rvtop/veer/dec/tlu/mstatus_ff/genblock.dff/genblock.dffs/i___367_i_2, which resulted in an inversion of 28 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/tlu/mstatus_ff/genblock.dff/genblock.dffs/dout[2]_i_1__28 into driver instance veerwolf/rvtop/veer/dec/tlu/mstatus_ff/genblock.dff/genblock.dffs/i___194_i_2, which resulted in an inversion of 31 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/dec/tlu/mstatus_ff/genblock.dff/genblock.dffs/dout[3]_i_1__37 into driver instance veerwolf/rvtop/veer/dec/tlu/mstatus_ff/genblock.dff/genblock.dffs/i___2_i_3, which resulted in an inversion of 95 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[27]_i_1__2 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___322_i_1, which resulted in an inversion of 9 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[28]_i_1__2 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___325_i_1, which resulted in an inversion of 9 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[29]_i_1__5 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___328_i_1, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[31]_i_1 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___231_i_3, which resulted in an inversion of 34 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__0_i_1 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___238_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__0_i_2 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___243_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__0_i_3 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___242_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__0_i_4 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___241_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__1_i_1 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___235_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__1_i_2 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___236_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__1_i_3 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___237_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__1_i_4 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[22]_i_2, which resulted in an inversion of 5 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__2_i_1 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[29]_i_2__0, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__2_i_2 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___233_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__2_i_3 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___232_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__2_i_4 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___234_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry__3_i_1 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[30]_i_2__0, which resulted in an inversion of 5 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry_i_1 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[17]_i_2, which resulted in an inversion of 5 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry_i_2 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___240_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry_i_3 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___239_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_dec0_carry_i_4 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[14]_i_2, which resulted in an inversion of 5 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_inc0_carry__3_i_1 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/i___231_i_1, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/pc_inc0_carry_i_1 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[2].btb_fa/genblock.genblock.dff/genblock.dffs/dout[13]_i_2__0, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[5].btb_fa/genblock.genblock.dff/genblock.dffs/dout[9]_i_1__4 into driver instance veerwolf/rvtop/veer/ifu/bpred.bp/fa.BTB_FAFLOPS[5].btb_fa/genblock.genblock.dff/genblock.dffs/dout[3]_i_2__3, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/ifc/faddrf1_ff/genblock.dff/genblock.dffs/dout[30]_i_1__5 into driver instance veerwolf/rvtop/veer/ifu/ifc/faddrf1_ff/genblock.dff/genblock.dffs/i___331_i_1, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/ifu/mem_ctl/miss_state_ff/genblock.dffs/dout[6]_i_1__15 into driver instance veerwolf/rvtop/veer/ifu/i___320, which resulted in an inversion of 70 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/bus_intf/bus_buffer/genblk10[2].buf_state_ff/genblock.dffs/dout[1]_i_1__181 into driver instance veerwolf/rvtop/veer/lsu/bus_intf/bus_buffer/genblk10[2].buf_state_ff/genblock.dffs/dout[1]_i_3__32, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/bus_intf/bus_buffer/genblk10[3].buf_ageff/dout[1]_i_1__178 into driver instance veerwolf/rvtop/veer/lsu/bus_intf/bus_buffer/genblk10[3].buf_ageff/dout[1]_i_2__68, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/lsu_lsc_ctl/lsu_pkt_mff/dout[37]_i_1__4 into driver instance veerwolf/rvtop/veer/lsu/lsu_lsc_ctl/lsu_pkt_mff/dout[36]_i_2__0, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/lsu_lsc_ctl/sarff/dout[0]_i_1__391 into driver instance veerwolf/rvtop/veer/lsu/lsu_lsc_ctl/sarff/dout[0]_i_2__119, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/lsu_lsc_ctl/sarff/dout[29]_i_1__77 into driver instance veerwolf/rvtop/veer/lsu/lsu_lsc_ctl/sarff/dout[29]_i_2__19, which resulted in an inversion of 9 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/lsu_lsc_ctl/sarff/dout[30]_i_1__80 into driver instance veerwolf/rvtop/veer/lsu/lsu_lsc_ctl/sarff/dout[30]_i_2__20, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/stbuf/RdPtrff/genblock.dffs/dout[31]_i_1__89 into driver instance veerwolf/rvtop/veer/lsu/stbuf/RdPtrff/genblock.dffs/dout[31]_i_3__64, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/stbuf/RdPtrff/genblock.dffs/dout[31]_i_1__90 into driver instance veerwolf/rvtop/veer/lsu/stbuf/RdPtrff/genblock.dffs/dout[31]_i_3__65, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/stbuf/RdPtrff/genblock.dffs/dout[31]_i_1__91 into driver instance veerwolf/rvtop/veer/lsu/stbuf/RdPtrff/genblock.dffs/dout[31]_i_3__66, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter veerwolf/rvtop/veer/lsu/stbuf/RdPtrff/genblock.dffs/dout[31]_i_1__92 into driver instance veerwolf/rvtop/veer/lsu/stbuf/RdPtrff/genblock.dffs/dout[31]_i_3__67, which resulted in an inversion of 6 pins
+Phase 2 Post Processing Netlist | Checksum: 2575ef4c0
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1955.852 ; gain = 102.043
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 69 cells
+Opt_design Change Summary
+=========================
+
+
+---------------------------------------------------------------------------------------------------------------------
+|  Phase                    |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+---------------------------------------------------------------------------------------------------------------------
+|  Sweep                    |               1  |              38  |                                              1  |
+|  Post Processing Netlist  |               0  |              69  |                                              0  |
+---------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1e4410b67
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1955.852 ; gain = 102.043
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1955.852 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1e4410b67
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1955.852 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+74 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 1955.852 ; gain = 316.781
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1955.852 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ibrahimbinmahfood/ECE540/ECE540.runs/impl_1/rvfpgaboolean_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 1955.852 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file rvfpgaboolean_drc_opted.rpt -pb rvfpgaboolean_drc_opted.pb -rpx rvfpgaboolean_drc_opted.rpx
+Command: report_drc -file rvfpgaboolean_drc_opted.rpt -pb rvfpgaboolean_drc_opted.pb -rpx rvfpgaboolean_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-804] Only the first 20 REQP-1840 messages were issued by report_drc. An additional 1 messages have not been issued. Use 'set_property MAX_MESSAGES <number> [get_drc_check REQP-1840]' to change the number of messages that should be reported.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/ibrahimbinmahfood/ECE540/ECE540.runs/impl_1/rvfpgaboolean_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1955.852 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-804] Only the first 20 REQP-1840 messages were issued by report_drc. An additional 1 messages have not been issued. Use 'set_property MAX_MESSAGES <number> [get_drc_check REQP-1840]' to change the number of messages that should be reported.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 43 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1955.852 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11e34d278
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1955.852 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2006.500 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: c23d07b7
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 2010.609 ; gain = 54.758
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1351b89e4
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:26 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1351b89e4
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 2124.539 ; gain = 168.688
+Phase 1 Placer Initialization | Checksum: 1351b89e4
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 12fd5ece3
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:31 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 13e640e0a
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:36 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: e4173b2f
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:36 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: c8eadab2
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:22 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 892 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 346 nets or LUTs. Breaked 0 LUT, combined 346 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2124.539 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            346  |                   346  |           0  |           1  |  00:00:05  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            346  |                   346  |           0  |           9  |  00:00:06  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: c8860134
+
+Time (s): cpu = 00:02:33 ; elapsed = 00:01:34 . Memory (MB): peak = 2124.539 ; gain = 168.688
+Phase 2.4 Global Placement Core | Checksum: 7c74837b
+
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:36 . Memory (MB): peak = 2124.539 ; gain = 168.688
+Phase 2 Global Placement | Checksum: 7c74837b
+
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:36 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: abceab67
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:01:41 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: ff3edd1c
+
+Time (s): cpu = 00:03:03 ; elapsed = 00:01:52 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1400da2d5
+
+Time (s): cpu = 00:03:03 ; elapsed = 00:01:52 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 10298acb7
+
+Time (s): cpu = 00:03:04 ; elapsed = 00:01:52 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 132508492
+
+Time (s): cpu = 00:03:22 ; elapsed = 00:02:03 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1a926b23c
+
+Time (s): cpu = 00:03:49 ; elapsed = 00:02:35 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 13dc9ee17
+
+Time (s): cpu = 00:03:54 ; elapsed = 00:02:42 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 9dae34bb
+
+Time (s): cpu = 00:03:54 ; elapsed = 00:02:42 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 140cc4f52
+
+Time (s): cpu = 00:04:22 ; elapsed = 00:02:57 . Memory (MB): peak = 2124.539 ; gain = 168.688
+Phase 3 Detail Placement | Checksum: 140cc4f52
+
+Time (s): cpu = 00:04:22 ; elapsed = 00:02:58 . Memory (MB): peak = 2124.539 ; gain = 168.688
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1a92d1cc8
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.943 | TNS=-842.396 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1c48e3dfa
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2188.730 ; gain = 0.000
+INFO: [Place 46-33] Processed net clk_gen/o_rst_core_reg_1, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net clk_gen/rst_core, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net clk_gen/o_rst_core_reg_3, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 3 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 3, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 26a33a065
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2188.730 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1a92d1cc8
+
+Time (s): cpu = 00:04:54 ; elapsed = 00:03:18 . Memory (MB): peak = 2188.730 ; gain = 232.879
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-13.738. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1d1129391
+
+Time (s): cpu = 00:05:31 ; elapsed = 00:03:44 . Memory (MB): peak = 2188.730 ; gain = 232.879
+
+Time (s): cpu = 00:05:31 ; elapsed = 00:03:44 . Memory (MB): peak = 2188.730 ; gain = 232.879
+Phase 4.1 Post Commit Optimization | Checksum: 1d1129391
+
+Time (s): cpu = 00:05:31 ; elapsed = 00:03:44 . Memory (MB): peak = 2188.730 ; gain = 232.879
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1d1129391
+
+Time (s): cpu = 00:05:32 ; elapsed = 00:03:44 . Memory (MB): peak = 2188.730 ; gain = 232.879
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                4x4|
+|___________|___________________|___________________|
+|      South|                1x1|                4x4|
+|___________|___________________|___________________|
+|       East|                1x1|                4x4|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1d1129391
+
+Time (s): cpu = 00:05:32 ; elapsed = 00:03:45 . Memory (MB): peak = 2188.730 ; gain = 232.879
+Phase 4.3 Placer Reporting | Checksum: 1d1129391
+
+Time (s): cpu = 00:05:32 ; elapsed = 00:03:45 . Memory (MB): peak = 2188.730 ; gain = 232.879
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2188.730 ; gain = 0.000
+
+Time (s): cpu = 00:05:32 ; elapsed = 00:03:45 . Memory (MB): peak = 2188.730 ; gain = 232.879
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 13d8d2c53
+
+Time (s): cpu = 00:05:32 ; elapsed = 00:03:45 . Memory (MB): peak = 2188.730 ; gain = 232.879
+Ending Placer Task | Checksum: f7b2fbca
+
+Time (s): cpu = 00:05:33 ; elapsed = 00:03:45 . Memory (MB): peak = 2188.730 ; gain = 232.879
+INFO: [Common 17-83] Releasing license: Implementation
+119 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:05:40 ; elapsed = 00:03:50 . Memory (MB): peak = 2188.730 ; gain = 232.879
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 2193.641 ; gain = 4.910
+report_design_analysis: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2193.641 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ibrahimbinmahfood/ECE540/ECE540.runs/impl_1/rvfpgaboolean_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:40 ; elapsed = 00:00:22 . Memory (MB): peak = 2193.641 ; gain = 4.910
+INFO: [runtcl-4] Executing : report_io -file rvfpgaboolean_io_placed.rpt
+report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.107 . Memory (MB): peak = 2193.641 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file rvfpgaboolean_utilization_placed.rpt -pb rvfpgaboolean_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file rvfpgaboolean_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 2193.641 ; gain = 0.000
+Command: route_design -timing_summary
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 91bc134f ConstDB: 0 ShapeSum: 65f6e87b RouteDB: 0
+Post Restoration Checksum: NetGraph: c8210cee NumContArr: 75e32ba0 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 13e04388e
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:42 . Memory (MB): peak = 2311.473 ; gain = 99.109
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 13e04388e
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:42 . Memory (MB): peak = 2312.523 ; gain = 100.160
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 13e04388e
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:43 . Memory (MB): peak = 2312.523 ; gain = 100.160
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 1d23337d4
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2349.352 ; gain = 136.988
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.612| TNS=-830.974| WHS=-3.674 | THS=-644.290|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0133142 %
+  Global Horizontal Routing Utilization  = 0.0223842 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 37927
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 37923
+  Number of Partially Routed Nets     = 4
+  Number of Node Overlaps             = 2
+
+Phase 2 Router Initialization | Checksum: 1dfcea519
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:16 . Memory (MB): peak = 2362.340 ; gain = 149.977
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 1dfcea519
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:16 . Memory (MB): peak = 2362.340 ; gain = 149.977
+Phase 3 Initial Routing | Checksum: 1c77b3cb5
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:32 . Memory (MB): peak = 2381.492 ; gain = 169.129
+INFO: [Route 35-580] Design has 33 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++====================+====================+===================================================+
+| Launch Setup Clock | Launch Hold Clock  | Pin                                               |
++====================+====================+===================================================+
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | veerwolf/vgacon_wrapper/vgacon/o_wb_dat_reg[14]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | veerwolf/vgacon_wrapper/vgacon/o_wb_dat_reg[10]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | veerwolf/vgacon_wrapper/vgacon/o_wb_dat_reg[2]/D  |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | veerwolf/vgacon_wrapper/vgacon/o_wb_dat_reg[17]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | veerwolf/vgacon_wrapper/vgacon/o_wb_dat_reg[0]/D  |
++--------------------+--------------------+---------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 9250
+ Number of Nodes with overlaps = 1147
+ Number of Nodes with overlaps = 287
+ Number of Nodes with overlaps = 105
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.745| TNS=-903.058| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 130715b2a
+
+Time (s): cpu = 00:04:18 ; elapsed = 00:03:05 . Memory (MB): peak = 2401.383 ; gain = 189.020
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.694| TNS=-897.423| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1ca0fa7bb
+
+Time (s): cpu = 00:04:32 ; elapsed = 00:03:19 . Memory (MB): peak = 2401.383 ; gain = 189.020
+Phase 4 Rip-up And Reroute | Checksum: 1ca0fa7bb
+
+Time (s): cpu = 00:04:32 ; elapsed = 00:03:19 . Memory (MB): peak = 2401.383 ; gain = 189.020
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: e8d1dc4c
+
+Time (s): cpu = 00:04:39 ; elapsed = 00:03:23 . Memory (MB): peak = 2401.383 ; gain = 189.020
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.694| TNS=-897.423| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1e8741f6d
+
+Time (s): cpu = 00:04:40 ; elapsed = 00:03:24 . Memory (MB): peak = 2401.383 ; gain = 189.020
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1e8741f6d
+
+Time (s): cpu = 00:04:40 ; elapsed = 00:03:24 . Memory (MB): peak = 2401.383 ; gain = 189.020
+Phase 5 Delay and Skew Optimization | Checksum: 1e8741f6d
+
+Time (s): cpu = 00:04:40 ; elapsed = 00:03:25 . Memory (MB): peak = 2401.383 ; gain = 189.020
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 17f1e1ce7
+
+Time (s): cpu = 00:04:49 ; elapsed = 00:03:30 . Memory (MB): peak = 2401.383 ; gain = 189.020
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.694| TNS=-911.114| WHS=-2.461 | THS=-115.377|
+
+
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 17909a919
+
+Time (s): cpu = 00:05:40 ; elapsed = 00:04:03 . Memory (MB): peak = 2726.801 ; gain = 514.438
+Phase 6.1 Hold Fix Iter | Checksum: 17909a919
+
+Time (s): cpu = 00:05:40 ; elapsed = 00:04:03 . Memory (MB): peak = 2726.801 ; gain = 514.438
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-13.694| TNS=-1115.116| WHS=0.061  | THS=0.000  |
+
+Phase 6.2 Additional Hold Fix | Checksum: f141ced2
+
+Time (s): cpu = 00:05:49 ; elapsed = 00:04:09 . Memory (MB): peak = 2726.801 ; gain = 514.438
+WARNING: [Route 35-468] The router encountered 90 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_4/I0
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_5/I0
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_5/I2
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_5/I3
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_5/I4
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_5/I5
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_7/I5
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_7/I4
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_4/I4
+	veerwolf/pmodD_wrapper/pmod_D_con/hc_sr04/o_wb_dat[1]_i_6/I1
+	.. and 80 more pins.
+
+Phase 6 Post Hold Fix | Checksum: 12de26ff2
+
+Time (s): cpu = 00:05:49 ; elapsed = 00:04:10 . Memory (MB): peak = 2726.801 ; gain = 514.438
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 26.0773 %
+  Global Horizontal Routing Utilization  = 26.2149 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 87.3874%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X38Y91 -> INT_L_X38Y91
+   INT_R_X31Y55 -> INT_R_X31Y55
+   INT_L_X36Y46 -> INT_L_X36Y46
+South Dir 1x1 Area, Max Cong = 83.7838%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 85.2941%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X24Y46 -> INT_L_X24Y46
+West Dir 1x1 Area, Max Cong = 77.9412%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 10be463ad
+
+Time (s): cpu = 00:05:50 ; elapsed = 00:04:10 . Memory (MB): peak = 2726.801 ; gain = 514.438
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 10be463ad
+
+Time (s): cpu = 00:05:50 ; elapsed = 00:04:10 . Memory (MB): peak = 2726.801 ; gain = 514.438
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 162533948
+
+Time (s): cpu = 00:05:59 ; elapsed = 00:04:20 . Memory (MB): peak = 2726.801 ; gain = 514.438
+
+Phase 10 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=-13.695| TNS=-1115.088| WHS=0.061  | THS=0.000  |
+
+Phase 10 Post Router Timing | Checksum: 13277b0fe
+
+Time (s): cpu = 00:06:36 ; elapsed = 00:04:41 . Memory (MB): peak = 2726.801 ; gain = 514.438
+CRITICAL WARNING: [Route 35-39] The design did not meet timing requirements. Please run report_timing_summary for detailed reports. Note: this situation might be resolved in the second pass of route design.
+Resolution: Verify that the timing was met or had small violations at all previous steps (synthesis, placement, power_opt, and phys_opt). Run report_timing_summary and analyze individual timing paths.
+INFO: [Route 35-253] TNS is the sum of the worst slack violation on every endpoint in the design. Review the paths with the biggest WNS violations in the timing reports and modify your constraints or your design to improve both WNS and TNS.
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:06:36 ; elapsed = 00:04:41 . Memory (MB): peak = 2726.801 ; gain = 514.438
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+140 Infos, 7 Warnings, 1 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:06:46 ; elapsed = 00:04:46 . Memory (MB): peak = 2726.801 ; gain = 533.160
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:31 ; elapsed = 00:00:12 . Memory (MB): peak = 2726.801 ; gain = 0.000
+report_design_analysis: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2726.801 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ibrahimbinmahfood/ECE540/ECE540.runs/impl_1/rvfpgaboolean_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:43 ; elapsed = 00:00:25 . Memory (MB): peak = 2726.801 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file rvfpgaboolean_drc_routed.rpt -pb rvfpgaboolean_drc_routed.pb -rpx rvfpgaboolean_drc_routed.rpx
+Command: report_drc -file rvfpgaboolean_drc_routed.rpt -pb rvfpgaboolean_drc_routed.pb -rpx rvfpgaboolean_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/ibrahimbinmahfood/ECE540/ECE540.runs/impl_1/rvfpgaboolean_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2726.801 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_methodology -file rvfpgaboolean_methodology_drc_routed.rpt -pb rvfpgaboolean_methodology_drc_routed.pb -rpx rvfpgaboolean_methodology_drc_routed.rpx
+Command: report_methodology -file rvfpgaboolean_methodology_drc_routed.rpt -pb rvfpgaboolean_methodology_drc_routed.pb -rpx rvfpgaboolean_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/ibrahimbinmahfood/ECE540/ECE540.runs/impl_1/rvfpgaboolean_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:55 ; elapsed = 00:00:29 . Memory (MB): peak = 2726.801 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file rvfpgaboolean_power_routed.rpt -pb rvfpgaboolean_power_summary_routed.pb -rpx rvfpgaboolean_power_routed.rpx
+Command: report_power -file rvfpgaboolean_power_routed.rpt -pb rvfpgaboolean_power_summary_routed.pb -rpx rvfpgaboolean_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+152 Infos, 8 Warnings, 1 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:49 ; elapsed = 00:00:31 . Memory (MB): peak = 2726.801 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file rvfpgaboolean_route_status.rpt -pb rvfpgaboolean_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file rvfpgaboolean_timing_summary_routed.rpt -pb rvfpgaboolean_timing_summary_routed.pb -rpx rvfpgaboolean_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file rvfpgaboolean_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file rvfpgaboolean_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file rvfpgaboolean_bus_skew_routed.rpt -pb rvfpgaboolean_bus_skew_routed.pb -rpx rvfpgaboolean_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force rvfpgaboolean.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC DPIP-1] Input pipelining: DSP veerwolf/rvtop/veer/exu/i_mul/prod_x0 input veerwolf/rvtop/veer/exu/i_mul/prod_x0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP veerwolf/rvtop/veer/exu/i_mul/prod_x0 input veerwolf/rvtop/veer/exu/i_mul/prod_x0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP veerwolf/rvtop/veer/exu/i_mul/prod_x0__0 input veerwolf/rvtop/veer/exu/i_mul/prod_x0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP veerwolf/rvtop/veer/exu/i_mul/prod_x0__0 input veerwolf/rvtop/veer/exu/i_mul/prod_x0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP veerwolf/rvtop/veer/exu/i_mul/prod_x0__1 input veerwolf/rvtop/veer/exu/i_mul/prod_x0__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP veerwolf/rvtop/veer/exu/i_mul/prod_x0__1 input veerwolf/rvtop/veer/exu/i_mul/prod_x0__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP veerwolf/rvtop/veer/exu/i_mul/prod_x0__2 input veerwolf/rvtop/veer/exu/i_mul/prod_x0__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell tap/dmi[31]_i_1 (pin tap/dmi[31]_i_1/I1) is not included in the LUT equation: 'O6=(A6+~A6)*((A3*A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A3' of cell tap/dmi[6]_i_1 (pin tap/dmi[6]_i_1/I1) is not included in the LUT equation: 'O6=(A2*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[0][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[0][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[1][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[1][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[2][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[2][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[3][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[3][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[4][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[4][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[5][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[5][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[6][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[6][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[7][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[7][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[8][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[8][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[9][0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ram/mem_reg_0_0 has an input control pin ram/mem_reg_0_0/ENARDEN (net: ram/mem_wr_en) which is driven by a register (veerwolf/axi_intercon/axi_xbar/gen_slv_port_demux[1].i_axi_demux/gen_demux.i_w_fifo/mem_q_reg[9][1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[2].cam_ff/genblock.dff/genblock.dffs/dout_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[2].cam_ff/genblock.dff/genblock.dffs/dout_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[2].cam_ff/genblock.dff/genblock.dffs/dout_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[2].cam_ff/genblock.dff/genblock.dffs/dout_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[2].cam_ff/genblock.dff/genblock.dffs/dout_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[2].cam_ff/genblock.dff/genblock.dffs/dout_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[2].cam_ff/genblock.dff/genblock.dffs/dout_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[2].cam_ff/genblock.dff/genblock.dffs/dout_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[3].cam_ff/genblock.dff/genblock.dffs/dout_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[3].cam_ff/genblock.dff/genblock.dffs/dout_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[3].cam_ff/genblock.dff/genblock.dffs/dout_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[3].cam_ff/genblock.dff/genblock.dffs/dout_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[3].cam_ff/genblock.dff/genblock.dffs/dout_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[3].cam_ff/genblock.dff/genblock.dffs/dout_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[3].cam_ff/genblock.dff/genblock.dffs/dout_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/cam_array[3].cam_ff/genblock.dff/genblock.dffs/dout_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/misc1ff/genblock.dff/genblock.dffs/dout_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/misc1ff/genblock.dff/genblock.dffs/dout_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/misc1ff/genblock.dff/genblock.dffs/dout_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1 has an input control pin veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ram_core_reg_1/ADDRARDADDR[13] (net: veerwolf/rvtop/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm.dccm_bank/ADR[9]) which is driven by a register (veerwolf/rvtop/veer/dec/decode/misc1ff/genblock.dff/genblock.dffs/dout_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 51 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./rvfpgaboolean.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:01:02 ; elapsed = 00:00:40 . Memory (MB): peak = 2990.250 ; gain = 263.449
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  6 08:30:14 2023...
