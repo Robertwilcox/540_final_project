@@ -1,0 +1,43 @@
+#
+# Authors: Ibrahim Binmahfood, Mohamed Gnedi
+# ECE 540, Kravitz
+# Final Project, Configuration
+# 11/25/2023
+#
+# Description: Maps the slaves at the respective offsets and their given sizes.
+#
+
+files_root: .
+vlnv: ::wb_intercon:0
+parameters:
+  masters:
+    io:
+      slaves : [rom, sys, ptc, gpio, vga, pmod_D, gpio1, rgb, uart]
+  slaves:
+    rom:
+      offset : 0x00000000
+      size : 0x00001000
+    sys:
+      offset : 0x00001000
+      size : 0x00000040
+    ptc:
+      offset : 0x00001200
+      size : 0x00000040
+    gpio:
+      offset : 0x00001400
+      size : 0x00000040
+    vga:
+      offset : 0x00001500
+      size : 0x00000040 
+    pmod_D:
+      offset : 0x00001640
+      size : 0x00000040
+    gpio1:
+      offset : 0x00001800
+      size : 0x00000040
+    rgb:
+      offset : 0x00001900
+      size : 0x00000040
+    uart:
+      offset : 0x00002000
+      size : 0x00001000
