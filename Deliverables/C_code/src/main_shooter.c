@@ -1,3 +1,18 @@
+/*
+ * Author: Ibrahim Binmahfood, Mohamed Gnedi, and Robert Wilcox
+ * ECE540, Kravitz
+ * Final Project, Implementation joystick_control.c
+ * 12/04/2023
+ *
+ * Platform: RVfpga on the Boolean Board  
+ * Description: Main game function. Monitors
+ * joystick and moves servo accordingly. Updates
+ * 7Segment display with joystick data. Monitors
+ * ultrasonic sensor and if detection made, updates
+ * game score on VGA display.
+ * 
+ */
+
 #include <stdio.h>
 #include <stdbool.h>
 #include "joystick_wrapper.h"

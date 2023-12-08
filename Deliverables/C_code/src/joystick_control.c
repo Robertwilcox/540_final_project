@@ -1,3 +1,17 @@
+/*
+ * Author: Ibrahim Binmahfood, Mohamed Gnedi, and Robert Wilcox
+ * ECE540, Kravitz
+ * Final Project, Implementation joystick_control.c
+ * 12/04/2023
+ *
+ * Platform: RVfpga on the Boolean Board  
+ * Description: Functions for reading 
+ * joystick data, converting from hex to dec,
+ * and enabling and displaying joystick
+ * data on 7Segment display
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/_types.h>

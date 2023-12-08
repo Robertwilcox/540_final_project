@@ -1,3 +1,14 @@
+/**
+ motor_control.c
+ *
+ * @author      Robert Wilcox (wilcox6@pdx.edu)
+ * @date        7-Dec-2023
+ *
+ * Controlls a DC motor via pwm (motor must be hooked up
+ * to viable circuitry). Currently only on or 
+ * off functions.
+ */
+
 #include "motor_control.h"
 
 // Define the base address for the DC motor controller

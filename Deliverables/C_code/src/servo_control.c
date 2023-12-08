@@ -1,3 +1,18 @@
+
+
+/**
+ servo_control.c
+ *
+ * @author      Robert Wilcox (wilcox6@pdx.edu)
+ * @date        7-Dec-2023
+ *
+ * Implements PWM controller on the FPGA to control
+ * servo motor. Servo control has 3 functions, which
+ * move the servo either direction or stop it. Within
+ * the functions there is a check to see if the 
+ * joystick is in the middle and stop movement if so
+ */
+
 #include <stdint.h>
 #include <stdio.h>
 #include <stdbool.h>
