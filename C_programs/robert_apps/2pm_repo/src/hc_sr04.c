@@ -27,8 +27,8 @@ uint8_t get_echo_pulse(void) {
 
 // get_status(void):
 //
-// IF an true echo pulse was detected, returns 0.
-// ELSE returns 2.
+// IF an true echo pulse was detected, returns true.
+// ELSE returns false.
 //
 bool get_status(void) {
     if ((RD_GPIO(PMODD_STATE) & (0x00000002)) == 0)
