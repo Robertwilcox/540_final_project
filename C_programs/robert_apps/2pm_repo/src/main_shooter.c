@@ -44,8 +44,7 @@ int main() {
     // Array to store button states
     int bttn[4] = {0};
 
-    // Variables for storing switch, LED, and temporary values
-    int switch_val, led_val;
+    // temporary values
     int temp_val0;
 
     // Arrays to store previous state of sensor inputs
@@ -54,8 +53,8 @@ int main() {
     // Final calculated previous state
     int prev_state_f;
 
-    // Current state and echo variable for sensor
-    int curr_state, echo;
+    // Current state for sensor
+    int curr_state
 
     // Initialize button inputs
     bttn_init(0x0);
@@ -98,10 +97,10 @@ int main() {
             }
         }
         
-        // Sensor detection and score updating logic
+        // Sensor detection of 10 samples
         for (int i = 0; i < 10; i++) {
             prev_state_i[i] = get_status();             // Store consecutive sensor states
-            for (int j = DEBOUNCE_DELAY; j>0; j--){}
+            for (int j = DEBOUNCE_DELAY; j>0; j--){}	// delay enough time to take out the balls from basket
         }
         curr_state = get_status() ? 0 : 1;              // Determine current state
 
