@@ -131,7 +131,7 @@ module PmodJSTK_Demo(
 		
 		reg wb_ack_ff;
 		//==================================================================================
-		reg [31:0] wb_jstk_reg, wb_jstk_reg2;
+	reg [31:0] wb_jstk_reg, wb_jstk_reg2; // two register to be used for XY-data and button input
 		always @(posedge wb_clk_i, posedge wb_rst_i) begin
 			if (wb_rst_i) begin
 				wb_jstk_reg = 32'h00 ;
@@ -148,6 +148,10 @@ module PmodJSTK_Demo(
 			end
 		end
 		assign wb_ack_o = wb_ack_ff;
+	
+		// x_data = {jstkData[9:8],jstkData[23:16]}; 
+		// y_data = {jstkData[25:24],jstkData[39:32]};
+		// Pass the bits [39-8] of the joystick to match the size of the WB register
 		assign wb_dat_o = (wb_adr_i[5:2]==0) ? jstkData[39:8]: wb_jstk_reg2;
 		//==================================================================================
 
