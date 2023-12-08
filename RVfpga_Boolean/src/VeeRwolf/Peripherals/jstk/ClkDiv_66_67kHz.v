@@ -1,5 +1,18 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
+// School: Portland State University
+// Student: Mohamed Gnedi
+// 
+// Create Date:    03/12/2023
+// Module Name:    ClkDiv_66_67kHz
+// Project Name:   PmodJSTK_Demo
+// Target Devices: Boolean Board
+// Description: Converts input 100MHz clock signal to a 66.67kHz clock signal.
+// Credit to Engineer: Josh Sackos
+// Info attached below
+//////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////
 // Company: Digilent Inc.
 // Engineer: Josh Sackos
 // 

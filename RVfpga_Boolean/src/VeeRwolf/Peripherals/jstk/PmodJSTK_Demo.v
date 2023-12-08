@@ -1,5 +1,34 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
+// School: Portland State University
+// Student: Mohamed Gnedi
+// 
+// Create Date:    03/12/2023
+// Module Name:    PmodJSTK_Demo
+// Project Name:   veerwolf_core
+// Target Devices: Boolean Board
+// Credit to Engineer: Josh Sackos & Kaitlyn Franz
+//
+// Description: This is a demo for the Digilent PmodJSTK. Data is sent and received
+//					 to and from the PmodJSTK at a frequency of 5Hz, and positional 
+//					 data is displayed on the seven segment display (SSD). The positional
+//					 data of the joystick ranges from 0 to 1023 in both the X and Y
+//					 directions. 
+//					 The PmodJSTK connects to pins {4, 2, 1} on port JA on the Boolean board.
+//					 JA[1]: A14 -> SCLK
+//					 JA[2]: B14 -> MISO  
+//					 JA[4]: B13 -> SS
+//					 SPI mode 0 is used for communication between the PmodJSTK and the Wishbone Bus.
+//
+// Main output: The XY data & Button presses from the joystick are sampled by the spiMode0 module within the PmodJSTK.
+//		The sequence of 5 Bytes is collected in the spiCtrl and passed to the Wishbone data out line.
+// 		Due to the limitation of the WB register sizes, the XY data is transferred and the buttons are skipped.
+//		The 32-bits of XY data are passed to the wb_dat_o register that's accessed by the FW to process the 
+//		joystick inputs.
+//
+// Info attached below
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 // Company: Digilent Inc.
 // Engineer: Josh Sackos
 //           Modified by Kaitlyn Franz
@@ -10,24 +39,6 @@
 // Project Name: 	 PmodJSTK_Demo
 // Target Devices: Nexys3
 // Tool versions:  ISE 14.1
-// Description: This is a demo for the Digilent PmodJSTK. Data is sent and received
-//					 to and from the PmodJSTK at a frequency of 5Hz, and positional 
-//					 data is displayed on the seven segment display (SSD). The positional
-//					 data of the joystick ranges from 0 to 1023 in both the X and Y
-//					 directions. Only one coordinate can be displayed on the SSD at a
-//					 time, therefore switch SW0 is used to select which coordinate's data
-//	   			 to display. The status of the buttons on the PmodJSTK are
-//					 displayed on LD2, LD1, and LD0 on the Nexys3. The LEDs will
-//					 illuminate when a button is pressed. Switches SW2 and SW1 on the
-//					 Nexys3 will turn on LD1 and LD2 on the PmodJSTK respectively. Button
-//					 BTND on the Nexys3 is used for resetting the demo. The PmodJSTK
-//					 connects to pins [4:1] on port JA on the Nexys3. SPI mode 0 is used
-//					 for communication between the PmodJSTK and the Nexys3.
-//
-//					 NOTE: The digits on the SSD may at times appear to flicker, this
-//						    is due to small pertebations in the positional data being read
-//							 by the PmodJSTK's ADC. To reduce the flicker simply reduce
-//							 the rate at which the data being displayed is updated.
 //
 // Revision History: 
 // 						Revision 0.01 - File Created (Josh Sackos)
@@ -120,7 +131,7 @@ module PmodJSTK_Demo(
 		
 		reg wb_ack_ff;
 		//==================================================================================
-		reg [31:0] wb_jstk_reg, wb_jstk_reg2;
+	reg [31:0] wb_jstk_reg, wb_jstk_reg2; // two register to be used for XY-data and button input
 		always @(posedge wb_clk_i, posedge wb_rst_i) begin
 			if (wb_rst_i) begin
 				wb_jstk_reg = 32'h00 ;
@@ -137,6 +148,10 @@ module PmodJSTK_Demo(
 			end
 		end
 		assign wb_ack_o = wb_ack_ff;
+	
+		// x_data = {jstkData[9:8],jstkData[23:16]}; 
+		// y_data = {jstkData[25:24],jstkData[39:32]};
+		// Pass the bits [39-8] of the joystick to match the size of the WB register
 		assign wb_dat_o = (wb_adr_i[5:2]==0) ? jstkData[39:8]: wb_jstk_reg2;
 		//==================================================================================
 
